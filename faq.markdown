@@ -35,6 +35,15 @@ nobody might ever read them.
 Please comment.</a>
 
 
+**Q:** I sent you a GitHub messsage.  Why don't you respond?
+
+vim-scripts is just a robot.  The best way to discuss things
+is by filing an issue on either the
+<a href="http://github.com/vim-scripts/vim-scraper/issues">scraper</a> or
+<a href="http://github.com/vim-scripts/vim-scripts.github.com/issues">documentation</a>.
+Don't be shy!
+
+
 **Q:** Is the mirror up-to-date?
 
 **A:** The scripts are updated multiple times per day from the
