@@ -18,19 +18,19 @@ happily mirror it.
 **Q:** Why are all the files in the wrong places?<br/>
 **Q:** Why doesn't this plugin work when I drop it in ~/.vim/bundles?
 
-**A:** The scripts on Vim's site come in all sorts of weird formats and
-layouts.  The scraper fixes them the best it can but there are bound to
+**A:** The scripts come in all sorts of weird formats and layouts.
+The scraper fixes them the best it can but there are bound to
 be a few that slip through the cracks.
-<a href="http://github.com/vim-scripts/vim-scraper/issues">File a scraper issue</a>
-that describes how to fix the script.
+<a href="http://github.com/vim-scripts/vim-scraper/issues">File an issue</a>
+that describes how to fix things.
 
 
 **Q:** Why can't I file an issue on a script?
 
 **A:** The issues and wikis are turned off for all scripts because
 there's little chance the script's original author would ever see them.
-Still, some people have asked to be able to leave issues even if nobody
-ever reads them.
+Still, some people have asked to be able to leave issues even though
+nobody might ever read them.
 <a href="http://github.com/vim-scripts/vim-scraper/issues/issue/3">
 Please comment.</a>
 
@@ -46,14 +46,15 @@ and the most recent scrapes can be seen on **TODO TODO**.
 **Q:** Why are the commit messages so ugly?
 
 **A:** Unfortunately there was no standard for how to write the
-release notes for a script so they were just mirrored verbatim.
+release notes for a script so they were just mirrored as-is.
 Trying to reformat them is likely to make things even worse.
 
 
 **Q:** Why are there invisible changes to be committed when I clone a script?
 
-**A:** We've seen this once before.  It appears to be due to a one-time
-corruption.  File an issue and we'll regenerate the problematic repo.
+**A:** We've seen this once before.  It appears to be due to a one-time corruption.
+<a href="http://github.com/vim-scripts/vim-scraper/issues">File an issue on the scraper</a>
+and we'll regenerate the problematic repo.
 
 
 For Script Developers
