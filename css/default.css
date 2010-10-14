@@ -1,0 +1,130 @@
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: Verdana,Geneva,sans-serif;
+  line-height: 150%;
+}
+
+html {
+  overflow-y: scroll;  /* force scroll bar to be visible so no jumping */
+}
+
+a:link, a:visited {
+  color: #0044b3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  border: none;
+}
+
+pre, code {
+  font-family: "Monaco", "DejaVu Sans Mono", "Courier New", "Courier";
+  font-size: 11pt;
+}
+
+pre {
+  margin: 0.3em 0 0.3em 0.9em;
+  padding: 0;
+  line-height: 1.8em;
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+}
+
+h1, h2, h3 {
+  font-family: Georgia,Utopia,Palatino,'Palatino Linotype',serif;
+  padding: 0;
+  margin: 1.6em 0 0.6em -0.9em;
+  line-height: 1.25em;
+  letter-spacing: 0.03em;
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #808080;
+}
+
+h2 {
+  font-size: 1.3em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #a0a0a0;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+blockquote {
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-left: 0.3em;
+  margin-right: 0;
+}
+
+#wrapper {
+  margin: 1em auto 2em auto;
+  text-align: left;
+  width: 55em;
+}
+
+#header {
+  position: relative;
+}
+
+#header .tagline {
+  float: right;
+  font-size: 1.2em;
+  font-weight: bold;
+  position: absolute;
+  top: 0.6em;
+  right: 0;
+}
+
+#sidebar { /* Parent Wrapper for inside boxes */
+  /* display: inline; */ /* IE Hack */
+  width: 12em;
+  float: left;
+  text-align: left;
+  margin-right: 2em;
+  font-family: "Gill Sans";
+  font-size: 11pt;
+  text-align: right;
+  border-right: 1px solid #ccc;
+  padding-right: 2em;
+  margin-top: 5em;
+}
+
+#sidebar ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#sidebar ol li {
+  padding: 0.3em 0 0.6em 0em;
+  color: #669966;
+}
+
+#content { /* Parent Wrapper for inside boxes */
+  /* display: inline; *//* IE Hack */
+  float: right;
+  width: 34em;
+  margin-left: 0.3em;
+  margin-bottom: 5em;
+}
+
+#footer {
+  color: #888;
+  border-top: 1px solid #ccc;
+  font-size: 0.7em;
+  padding: 0.3em;
+  margin: 2em 0 3em 0em;
+  clear: both;
+}
+

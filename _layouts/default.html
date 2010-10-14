@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Vim Scripts &mdash; {{ page.title }}</title>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <style type='text/css'>
+      @import 'css/default.css';
+    </style>
+  </head>
+
+  <body>
+    <div id='wrapper'>
+      <div id='header'>
+        <a href='index.html'><img src="images/vim-mirror.jpg" alt="Vim Mirror Logo"></a>
+      </div>
+      <div id='sidebar'>
+        <ol class='toc'>
+          <li><a href='index.html'>Home</a></li>
+          <li><a href='faq.html'>FAQ</a></li>
+          <li><a href='scripts.html'>Scripts</a></li>
+        </ol>
+      </div>
+      <div id='content'>
+        <h1 id='{{ page.title | downcase | replace(' ', '_') }}'>{{ page.title }}</h1>
+        {{ content }}
+      </div>
+      <div id='footer'>
+        Site created with <a href="http://github.com/mojombo/jekyll/wiki">Jekyll</a>.  Please <a href="http://github.com/vim-scripts/vim-scripts.github.com">suggest changes</a> as issues or patches.
+      </div>
+    </div>
+  </body>
+</html>
