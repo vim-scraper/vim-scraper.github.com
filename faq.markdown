@@ -7,44 +7,53 @@ title: FAQ
 For Script Users
 ================
 
-**Q:** The files are correct but they're in the wrong places!  This repo can't be used by Pathogen.
-
-**A:** Scripts come in all sorts of weird formats and layouts.
-We've fixed them the best we can but there are bound to be a few that
-slipped through the cracks.  File an issue with that describes the
-changes needed.
-
-**Q:** A script repository appears corrupted.<br/>
-**Q:** When I clone a script, the working directory has changes that need to be committed.
-
-**A:** We've seen this once before.  File an issue and we'll regenerate the repo..
-
 **Q:** Can you fix a bug in one of your scripts?
 
 **A:** Unfortunately there's nothing the vim-scripts mirror can
-do about this.  You'll need to notify the script's author.
+do about this.  You'll need to notify the script's author.  When
+a fixed version of the plugin is released, vim-scripts will
+happily mirror it.
+
+
+**Q:** Why are all the files in the wrong places?<br/>
+**Q:** Why doesn't this plugin work when I drop it in ~/.vim/bundles?
+
+**A:** The scripts on Vim's site come in all sorts of weird formats and
+layouts.  The scraper fixes them the best it can but there are bound to
+be a few that slip through the cracks.
+<a href="http://github.com/vim-scripts/vim-scraper/issues">File a scraper issue</a>
+that describes how to fix the script.
+
+
+**Q:** Why can't I file an issue on a script?
+
+**A:** The issues and wikis are turned off for all scripts because
+there's little chance the script's original author would ever see them.
+Still, some people have asked to be able to leave issues even if nobody
+ever reads them.
+<a href="http://github.com/vim-scripts/vim-scraper/issues/issue/3">
+Please comment.</a>
+
 
 **Q:** Is the mirror up-to-date?
 
-**A:** The scripts are updated multiple times per day based on the
-RSS feed.  The most recent changes can be found on the GitHub project
-page, and the results of each scrape can be found somewhere on here.
-**TODO TODO**
+**A:** The scripts are updated multiple times per day from the
+RSS feed.  The most recent changes can be seen on the
+<a href="http://github.com/vim-scripts">GitHub page</a>,
+and the most recent scrapes can be seen on **TODO TODO**.
 
-**Q:** Why are the commit messages so horrible?
 
-**A:** Unfortunately there is no standard for how to write the
-release notes for a script so we just mirrored them verbatim.
+**Q:** Why are the commit messages so ugly?
+
+**A:** Unfortunately there was no standard for how to write the
+release notes for a script so they were just mirrored verbatim.
 Trying to reformat them is likely to make things even worse.
 
-**Q:** Why can't I file an issue on the script?
 
-**A:** The issues and wikis are turned off for all scripts because
-ithere's little chance the script's original author would ever see them.
-Still, some people have asked to be able to leave issues even if nobody
-ever reads them.  This needs more discussion.
-**TODO TODO**: create issues where people can comment on whether to
-turn the issues and wiki tabs on.
+**Q:** Why are there invisible changes to be committed when I clone a script?
+
+**A:** We've seen this once before.  It appears to be due to a one-time
+corruption.  File an issue and we'll regenerate the problematic repo.
 
 
 For Script Developers
@@ -53,10 +62,13 @@ For Script Developers
 **Q:** Can I point the vim-scripts repo at my official GitHub repo?<br/>
 **Q:** Can I send you some fixes for a script?
 
-**A:** No, vim-scripts is simply a mirror of <a href="http://www.vim.org/scripts/index.php">Vim's site</a>.  Send your changes to the original author.
-Of course, you can always fork a vim-scripts repo for yourself.
+**A:** No, vim-scripts is simply a mirror of <a href="http://www.vim.org/scripts/index.php">Vim's site</a>.
+Send your changes to the original author.
+Of course, you can always fork a vim-scripts repo and apply your fixes there.
+
 
 **Q:** My commits don't have my icon next to them.
 
-**A:** Your email address is probably different.  **TODO TODO** Expand on this.
+**A:** Your email address on the vim scripts site is probably different.
+**TODO TODO** Expand on this.
 
