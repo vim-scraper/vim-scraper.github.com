@@ -5,6 +5,12 @@ title: Vim Scripts
 
 This is a mirror of all the scripts on <a href="http://www.vim.org/scripts/">http://www.vim.org/scripts/</a>.
 
+**WARNING: we are not live yet!  Do not expect stability.**
+There is still a good chance that you will have to delete and
+re-clone your repos without warning.
+
+We are close though.
+
 The <a href="http://github.com/vim-scripts/">GitHub page</a>
 shows the plugins that have been updated recently.
 
