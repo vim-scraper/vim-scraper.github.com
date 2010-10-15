@@ -3,18 +3,34 @@ layout: default
 title: Vim Scripts
 ---
 
-This is a mirror of all the scripts on <a href="http://www.vim.org/scripts/">http://www.vim.org/scripts/</a>.
+This is a mirror of all the [Vim scripts](http://www.vim.org/scripts/).
 
 **WARNING: we are not live yet!  Do not expect stability.**
+
 There is still a good chance that you will have to delete and
 re-clone your repos without warning.
 
-We are close though.
+We are close though!
 
-The <a href="http://github.com/vim-scripts/">GitHub page</a>
-shows the plugins that have been updated recently.
+## Motivation
 
-The easiest way to use these scripts is with <a href="http://github.com/tpope/vim-pathogen">Pathogen</a>.
-See <a href="http://github.com/bronson/vim-update-bundles">vim-update-bundles</a> for an easy way to use Pathogen.
+This mirror is an attempt to improve [Vim] ecosystem by simplifying plugin management.
 
+While [Pathogen] simplifies approach to [Vim] plugins, this mirror provides unified access to all [available Vim scripts](http://github.com/vim-scripts/repositories) using [Git].
 
+## Requirements
+
+[Vim], [Git]. 
+
+Check out [vim-update-bundles](http://github.com/bronson/vim-update-bundles) for an easy way to maintain your plugins with [Pathogen].
+
+See [Faq] for more information. 
+
+## Updates
+
+Visit [GitHub page](http://github.com/vim-scripts/) or grab the [feed](http://github.com/vim-scripts.atom)![feed](http://github.com/images/icons/feed.png) to stay updated on recent activity.
+
+[Pathogen]:http://github.com/tpope/vim-pathogen
+[Vim]:http://vim.org
+[Git]:http://git-scm.com
+[Faq]:/faq.html
