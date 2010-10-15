@@ -18,10 +18,6 @@ This mirror is an attempt to improve [Vim] ecosystem by simplifying plugin manag
 
 While [Pathogen] simplifies approach to [Vim] plugins, this mirror provides unified access to all [available Vim scripts](http://github.com/vim-scripts/repositories) using [Git].
 
-## Requirements
-
-[Vim], [Git], [Ruby]. 
-
 Check out [vim-update-bundles](http://github.com/bronson/vim-update-bundles) for an easy way to maintain your plugins with [Pathogen].
 
 See [Faq] for more information. 
