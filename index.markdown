@@ -20,7 +20,7 @@ While [Pathogen] simplifies approach to [Vim] plugins, this mirror provides unif
 
 ## Requirements
 
-[Vim], [Git]. 
+[Vim], [Git], [Ruby]. 
 
 Check out [vim-update-bundles](http://github.com/bronson/vim-update-bundles) for an easy way to maintain your plugins with [Pathogen].
 
@@ -33,4 +33,5 @@ Visit [GitHub page](http://github.com/vim-scripts/) or grab the [feed](http://gi
 [Pathogen]:http://github.com/tpope/vim-pathogen
 [Vim]:http://vim.org
 [Git]:http://git-scm.com
+[Ruby]:http://ruby-lang.org
 [Faq]:/faq.html
