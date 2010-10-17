@@ -77,6 +77,35 @@ blockquote {
   position: relative;
 }
 
+#header h2 {
+  font-size: 2em;
+  line-height: 0;
+  background: url('/images/vim-mirror.jpg') no-repeat; 
+  border: 0;
+  margin: 1em;
+  padding-top: 67px;
+  padding-bottom: 50px;
+  padding-left: 133px;
+}
+
+#header h2 a:link,
+#header h2 a:visited,
+#header h2 a:hover,
+#header h2 a:active {
+  color: #888;
+  font-style:italic;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#header h2 a:link span,
+#header h2 a:visited span,
+#header h2 a:hover span,
+#header h2 a:active span {
+  visibility:hidden;
+}
+
+
 #header .tagline {
   font-size: 1.2em;
   font-weight: bold;
