@@ -68,9 +68,9 @@ blockquote {
 }
 
 #wrapper {
-  margin: 1em auto 2em auto;
+  margin: 1em 1em 2em;
   text-align: left;
-  width: 55em;
+  max-width: 70em;
 }
 
 #header {
@@ -78,7 +78,6 @@ blockquote {
 }
 
 #header .tagline {
-  float: right;
   font-size: 1.2em;
   font-weight: bold;
   position: absolute;
@@ -88,8 +87,8 @@ blockquote {
 
 #sidebar { /* Parent Wrapper for inside boxes */
   /* display: inline; */ /* IE Hack */
-  width: 12em;
   float: left;
+  width: 12em;
   text-align: left;
   margin-right: 2em;
   font-family: "Gill Sans";
@@ -113,9 +112,7 @@ blockquote {
 
 #content { /* Parent Wrapper for inside boxes */
   /* display: inline; *//* IE Hack */
-  float: right;
-  width: 34em;
-  margin-left: 0.3em;
+  margin-left:17em;
   margin-bottom: 5em;
 }
 
@@ -125,6 +122,6 @@ blockquote {
   font-size: 0.7em;
   padding: 0.3em;
   margin: 2em 0 3em 0em;
-  clear: both;
+  text-align:center;
 }
 
