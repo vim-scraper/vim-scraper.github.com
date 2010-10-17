@@ -4,8 +4,7 @@ title: FAQ
 ---
 
 
-For Script Users
-================
+### For Script Users
 
 **Q:** Can you fix a bug in one of your scripts?
 
@@ -66,8 +65,7 @@ Trying to reformat them is likely to make things even worse.
 and we'll regenerate the problematic repo.
 
 
-For Script Developers
-=====================
+### For Script Developers
 
 **Q:** Can I point the vim-scripts repo at my official GitHub repo?<br/>
 **Q:** Can I send you some fixes for a script?
