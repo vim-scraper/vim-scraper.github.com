@@ -38,7 +38,6 @@ pre {
 h1, h2, h3 {
   font-family: Georgia,Utopia,Palatino,'Palatino Linotype',serif;
   padding: 0;
-  margin: 1.6em 0 0.6em -0.9em;
   line-height: 1.25em;
   letter-spacing: 0.03em;
 }
@@ -46,14 +45,11 @@ h1, h2, h3 {
 h1 {
   font-size: 2em;
   margin-top: 0;
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid #808080;
 }
 
 h2 {
   font-size: 1.3em;
   padding-bottom: 0.3em;
-  border-bottom: 1px solid #a0a0a0;
 }
 
 h3 {
@@ -78,14 +74,13 @@ blockquote {
 }
 
 #header h2 {
-  font-size: 2em;
+  font-size: 30px;
   line-height: 0;
   background: url('/images/vim-mirror.jpg') no-repeat; 
-  border: 0;
   margin: 1em;
   padding-top: 67px;
   padding-bottom: 50px;
-  padding-left: 133px;
+  padding-left: 137px;
 }
 
 #header h2 a:link,
@@ -117,15 +112,11 @@ blockquote {
 #sidebar { /* Parent Wrapper for inside boxes */
   /* display: inline; */ /* IE Hack */
   float: left;
-  width: 12em;
+  width: 150px;
   text-align: left;
-  margin-right: 2em;
   font-family: "Gill Sans";
-  font-size: 11pt;
+  font-size: 14pt;
   text-align: right;
-  border-right: 1px solid #ccc;
-  padding-right: 2em;
-  margin-top: 5em;
 }
 
 #sidebar ol {
@@ -141,7 +132,7 @@ blockquote {
 
 #content { /* Parent Wrapper for inside boxes */
   /* display: inline; *//* IE Hack */
-  margin-left:17em;
+  margin-left:195px;
   margin-bottom: 5em;
 }
 
