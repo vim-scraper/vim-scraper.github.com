@@ -1,26 +1,20 @@
 ---
 layout: default
-title: Vim Scripts
+title: About
 ---
 
 This is a mirror of all the [Vim scripts](http://www.vim.org/scripts/).
 
 **WARNING: we are not live yet!  Do not expect stability.**
-
 There is still a good chance that you will have to delete and
-re-clone your repos without warning.
-
-We are close though!
+re-clone your repos without warning.  We are close though!
 
 ## Motivation
 
 This mirror is an attempt to improve [Vim] ecosystem by simplifying plugin management.
 
 While [Pathogen] simplifies approach to [Vim] plugins, this mirror provides unified access to all [available Vim scripts](http://github.com/vim-scripts/repositories) using [Git].
-
-Check out [vim-update-bundles](http://github.com/bronson/vim-update-bundles) for an easy way to maintain your plugins with [Pathogen].
-
-See [Faq] for more information. 
+Check out [vim-update-bundles](http://github.com/bronson/vim-update-bundles) for an easy way to maintain your plugins with [Pathogen], see [Faq] for more information. 
 
 ## Updates
 
