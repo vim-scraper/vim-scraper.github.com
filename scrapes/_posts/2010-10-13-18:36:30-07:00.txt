@@ -1,3 +1,8 @@
+---
+layout: scrape
+title: Scrape at 2010-10-13 18:36:32 -0700
+category: scrape
+---
 Starting scrape at 2010-10-13 18:36:32 -0700
 Resuming RSS scrape.
 feed contains ["3276", "2653", "3065", "2624", "2590", "2945", "2441", "3267", "3269", "3275"]

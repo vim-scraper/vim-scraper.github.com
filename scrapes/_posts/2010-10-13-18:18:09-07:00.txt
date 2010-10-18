@@ -1,3 +1,8 @@
+---
+layout: scrape
+title: Scrape at 2010-10-13 18:18:11 -0700
+category: scrape
+---
 Starting scrape at 2010-10-13 18:18:11 -0700
 Resuming full scrape from 2790.  Target is 79f62c5416c4855d4979fc913168f8b1.
 downloading http://www.vim.org/scripts/script.php?script_id=2790
