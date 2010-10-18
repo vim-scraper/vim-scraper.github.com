@@ -1,7 +1,7 @@
 body {
   background-color: #fff;
   color: #000;
-  font-family: Verdana,Geneva,sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
   line-height: 150%;
 }
 
@@ -36,7 +36,6 @@ pre {
 }
 
 h1, h2, h3 {
-  font-family: Georgia,Utopia,Palatino,'Palatino Linotype',serif;
   padding: 0;
   line-height: 1.25em;
   letter-spacing: 0.03em;
@@ -91,6 +90,7 @@ blockquote {
   font-style:italic;
   text-decoration: none;
   font-weight: bold;
+  font-family: Georgia,Utopia,Palatino,'Palatino Linotype',serif;
 }
 
 #header h2 a:link span,
@@ -114,7 +114,6 @@ blockquote {
   float: left;
   width: 150px;
   text-align: left;
-  font-family: "Gill Sans";
   font-size: 14pt;
   text-align: right;
 }

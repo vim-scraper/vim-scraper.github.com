@@ -14,7 +14,7 @@ re-clone your repos without warning.  We are close though!
 
 # Recent News
 
-No news is good news!  The news archives are <a href='/news.html'>here</a>.
+No news is good news!  The archives are <a href='/news.html'>here</a>.
 
 {% for post in site.categories.news offset: 0 limit: 3 %}
   <div id='news'>
