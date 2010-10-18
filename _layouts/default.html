@@ -4,6 +4,9 @@
     <title>Vim Scripts &mdash; {{ page.title }}</title>
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
     <link rel="stylesheet" type="text/css" href="/css/default.css"/>
+    {% if page.rss %}
+      <link href="{{ page.rss }}" rel="alternate" title="{{ page.rsstitle }}" type="application/atom+xml" />
+    {% endif %}
   </head>
 
   <body>

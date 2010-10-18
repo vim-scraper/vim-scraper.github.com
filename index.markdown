@@ -1,6 +1,8 @@
 ---
 layout: default
 title: About
+rss: /feeds/news.xml
+rsstitle: vim-scripts news feed
 ---
 
 This is a mirror of all [scripts on vim.org](http://www.vim.org/scripts/).
