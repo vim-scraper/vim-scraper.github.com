@@ -21,7 +21,7 @@ No news is good news!  The archives are <a href='/news.html'>here</a>.
 {% for post in site.categories.news offset: 0 limit: 3 %}
   <div id='news'>
     <div class='newstitle'><a href="{{ post.url }}">{{ post.title }}</a></div>
-    <p>{{ post.date | date_to_string }} &mdash; {{ post.content | strip_html | truncatewords: 25 }} (<a href="{{ post.url }}/">Read more</a>)</p>
+    <p>{{ post.date | date_to_string }} &mdash; {{ post.content | strip_html | truncatewords: 25 }} (<a href="{{ post.url }}">Read more</a>)</p>
   </div>
 {% endfor %}
 
