@@ -10,6 +10,8 @@ It provides unified access to all
 [available Vim scripts](http://github.com/vim-scripts/repositories)
 using [Git].
 
+<h2><blockquote><a href="http://github.com/vim-scripts/">The Scripts</a></blockquote></h2>
+
 **NOTE: we are in a beta period.**
 We expect that things will be stable from here on out but these repos
 are still too new to be sure.  Enjoy using these scripts and report
