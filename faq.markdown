@@ -14,23 +14,22 @@ a fixed version of the plugin is released, vim-scripts will
 happily mirror it.
 
 
-**Q:** Why are all the files in the wrong places?<br/>
-**Q:** Why doesn't this plugin work when I drop it in ~/.vim/bundles?
+**Q:** Why are all the files in the wrong places?
+Why doesn't this plugin just work when I drop it in ~/.vim/bundles?
 
-**A:** The scripts come in all sorts of weird formats and layouts.
-The scraper fixes them the best it can but there are bound to
-be a few that slip through the cracks.
+**A:** It should.  Scripts come in all sorts of weird formats and layouts
+and the scraper corrects them the best it can.  It probably just got confused.
 <a href="http://github.com/vim-scripts/vim-scraper/issues">File an issue</a>
-that describes how to fix things.
+and we'll fix the scraper and regenerate the script.
 
 
 **Q:** Why can't I file an issue on a script?
 
 **A:** The issues and wikis are turned off for all scripts because
-there's little chance the script's original author would ever see them.
-Still, some people have asked to them turned on even though
-nobody might ever read them.  It's easy enough to change.
-We just haven't made a final decision yet.
+there's little chance the original authors would ever see them.
+Still, it might make sense to be able to file issues anyway.
+This is easy enough to change, we just haven't made a final decision yet.
+Discuss it [here](http://github.com/vim-scripts/vim-scraper/issues/issue/2).
 
 
 **Q:** I sent you a GitHub messsage.  Why don't you respond?
