@@ -33,10 +33,10 @@ It's minor, but it's nice that the dates on these scripts were fixed:
  - 1082 - MS-Word-from-VIM
 
 Finally, in the past two months the authors of the following scripts
-deleted some or all of their histories.  We restored missing revisions
+deleted some or all of their histories.  The missing revisions
 were restored from the previous vim-scripts mirror.  This explains why
-a few commits here and there still have the old (broken) email addresses
-and commit messages.
+a few commits here and there might still have the old (broken) email
+addresses.  No big deal.
 
  - 2791 - popup\_it--su
  - 1259 - sienna
