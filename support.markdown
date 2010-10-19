@@ -3,7 +3,8 @@ layout: default
 title: Support
 ---
 
-If you find a script that has been improperly packaged, please
+If you find a script that has been improperly packaged
+or can't immediately be used with Pathogen, please
 [file an issue](http://github.com/vim-scripts/vim-scraper/issues)
 on the [vim-scraper](http://github.com/vim-scripts/vim-scraper) package.
 
