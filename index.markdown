@@ -14,7 +14,7 @@ using [Git].
 
 **NOTE: we are in a beta period.**
 We expect that things will be stable from here on out but these repos
-are still too new to be sure.  Enjoy using these scripts and report
+are still too new to be sure.  Enjoy using them and report
 any problems you see on the [issue tracker](http://github.com/vim-scripts/vim-scraper/issues)!
 
 # Recent News
