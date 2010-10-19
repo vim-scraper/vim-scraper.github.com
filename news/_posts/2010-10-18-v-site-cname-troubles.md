@@ -45,6 +45,8 @@ Probably related, when I push the jekyll pages, GitHub sends an email saying:
 As far as I can tell, the CNAME file is fine and the vim-scripts.org
 DNS is set up exactly [as documented](http://pages.github.com/).
 
+UPDATE: GitHub [support issue filed](http://support.github.com/discussions/site/2081-page-build-failed-bad-cname).
+
 I'm hoping this is the sort of problem that
 solves itself in a day or two...  DNS problems often are.
 
