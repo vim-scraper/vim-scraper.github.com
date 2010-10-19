@@ -4,6 +4,9 @@ title: Site CNAME Troubles
 category: news
 ---
 
+**UPDATE:** GitHub has resolved the problem.  [http://vim-scripts.org](http://vim-scripts.org/)
+is the best way to access this site now.
+
 vim-scripts is having some DNS teething issues.  This article
 describes how to access the pages even when things are going
 wrong.

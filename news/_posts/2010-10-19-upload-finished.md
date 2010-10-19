@@ -14,3 +14,6 @@ The two recalcitrant repos:
 
 Please [file issues](http://github.com/vim-scripts/vim-scraper/issues)
 if you notice problems with any other scripts.
+
+**UPDATE:** Thanks excellent GitHub support, these repos have been fixed and uploaded.
+
