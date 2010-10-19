@@ -61,17 +61,20 @@ and we'll regenerate the problematic repo.
 **Q:** Can I point the vim-scripts repo at my official GitHub repo?<br/>
 
 **A:** No, vim-scripts is simply a mirror of <a href="http://www.vim.org/scripts/index.php">Vim's site</a>.
+The best thing to do is put your GitHub URL at the top of your script's
+description on vim.org.  This will ensure that it appears at the top
+of your script's README on GitHub.
 
 
 **Q:** Can I send you some fixes for a script?
 
-No, we only accept updates from the Vim scripts site.  When the fixes
-appear in a new package on vim.org, they will quickly be mirroed here.
+**A:** We only accept updates from the Vim scripts site.  When the fixes
+appear in a new package on vim.org, they will quickly be mirrored here.
 
 
-**Q:** My commits don't have my icon next to them.
+**Q:** My commits in the scripts I wrote don't have my GitHub icon next to them.
 
 **A:** The email address you used on the vim scripts site is probably different
 from the one you're using on GitHub.  Go into your GitHub [account settings](https://github.com/account)
-and add your vim email address as an alternate.
+and add your vim email address as an alternate email address.
 
