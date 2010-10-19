@@ -10,9 +10,10 @@ It provides unified access to all
 [available Vim scripts](http://github.com/vim-scripts/repositories)
 using [Git].
 
-**WARNING: we are not live yet!  Do not expect stability.**
-There is still a good chance that you will have to delete and
-re-clone your repos without warning.  We are close though!
+**NOTE: we are in a beta period.**
+We expect that things will be stable from here on out but these repos
+are still too new to be sure.  Enjoy using these scripts and report
+any problems you see on the [issue tracker](http://github.com/vim-scripts/vim-scraper/issues)!
 
 # Recent News
 
