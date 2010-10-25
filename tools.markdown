@@ -36,3 +36,5 @@ these will.
  * [GetLatestVimScripts](http://www.vim.org/scripts/script.php?script_id=642)
    a 100% VimL solution to keep plugins updated.
 
+Also see the [question on StackOverflow](http://stackoverflow.com/questions/2458398/package-management-for-vim).
+
