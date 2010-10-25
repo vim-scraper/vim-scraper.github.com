@@ -46,9 +46,16 @@ these will.
  * [Vim Script Updater](http://www.vim.org/scripts/script.php?script_id=3135)
    manages plugins using Python.
  * [GetLatestVimScripts](http://www.vim.org/scripts/script.php?script_id=642)
-   a 100% VimL solution to keep plugins updated.
+   is a 100% VimL solution.
 
 Also see the [question on StackOverflow](http://stackoverflow.com/questions/2458398/package-management-for-vim).
+
+# Contributions
+
+Suggestions for this list are warmly welcomed!
+[File an issue](http://github.com/vim-scripts/vim-scripts.github.com/issues)
+or email
+[brons_vimtools@rinspin.com](mailto:brons_vimtools@rinspin.com).
 
 [Pathogen]:http://github.com/tpope/vim-pathogen
 
