@@ -5,43 +5,57 @@ rss: /feeds/news.xml
 rsstitle: vim-scripts news feed
 ---
 
-This is a mirror of all [scripts on vim.org](http://www.vim.org/scripts/).
-It provides unified access to all
-[available Vim scripts](http://github.com/vim-scripts/repositories)
-using [Git].
+This mirror was inspired by [Pathogen]'s simple approach to [Vim] plugins.
+It provides access to any of the
+[scripts on vim.org](http://www.vim.org/scripts/) using [Git].
 
-<h2><blockquote><a href="http://github.com/vim-scripts/">The Scripts</a></blockquote></h2>
+<h2><blockquote><a href="/scripts.html">The Scripts</a></blockquote></h2>
 
 **NOTE: we are in a beta period.**
 We expect that things will be stable from here on out but these repos
 are still too new to be sure.  Enjoy using them and report
 any problems you see on the [issue tracker](http://github.com/vim-scripts/vim-scraper/issues)!
 
-# Recent News
+# [Recent News](/news.html)
 
-No news is good news!  The archives are <a href='/news.html'>here</a>.
+No news is good news!
 
 {% for post in site.categories.news offset: 0 limit: 3 %}
   <div id='news'>
     <div class='newstitle'><a href="{{ post.url }}">{{ post.title }}</a></div>
-    <p>{{ post.date | date_to_string }} &mdash; {{ post.content | strip_html | truncatewords: 25 }} (<a href="{{ post.url }}">Read more</a>)</p>
+    <blockquote>
+      <p>{{ post.date | date_to_string }} &mdash; {{ post.content | strip_html | truncatewords: 25 }} (<a href="{{ post.url }}">Read more</a>)</p>
+    </blockquote>
   </div>
 {% endfor %}
 
-# Tools
+# Usage
 
-[Pathogen]'s simple approach to [Vim] plugins inspired this mirror.
-Since then, others have written tools to make things even easier.
+It's pretty easy to clone plugins into your ~/.vim/bundles directory
+and have them immediately available for use via [Pathogen].
 
- * [vim-update-bundles](http://github.com/bronson/vim-update-bundles)
-   is a small ruby script that makes it easy to set up and manage [Pathogen].
- * [vundle](http://github.com/gmarik/vundle) is similar and 100% vimscript.
-
-See the [Faq] for more.
+Still, it can be even easier.  See [Vim Plugin Managers](/tools.html).
 
 # Updates
 
-Visit [GitHub page](http://github.com/vim-scripts/) or grab the [feed](http://github.com/vim-scripts.atom)![feed](http://github.com/images/icons/feed.png) to stay updated on recent activity.
+Watch the [news page](/news.html) or subscribe to
+[its feed](/feeds/news.xml)![feed](http://github.com/images/icons/feed.png)
+to keep track of what's happening on this mirror.  This should be
+fairly low traffic.
+
+To watch for updates to your favorite scripts, find them on GitHub
+and either follow them or subscribe to their RSS feeds.  This way
+you see changes to only the scripts that you're interested in.
+
+If you want to see changes to every script, follow the
+[vim-scripts user](http://github.com/vim-scripts/)
+or subscribe to its
+[RSS feeds](http://github.com/vim-scripts.atom)![feed](http://github.com/images/icons/feed.png).
+
+Finally, if you want to keep track of just how the scripts are being
+mirrored, follow the [vim-scraper](http://github.com/vim-scripts/vim-scraper)
+project or its
+[RSS feed](http://github.com/vim-scripts/vim-scraper/commits/master.atom)![feed](http://github.com/images/icons/feed.png).
 
 [Pathogen]:http://github.com/tpope/vim-pathogen
 [Vim]:http://vim.org
