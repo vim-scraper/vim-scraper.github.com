@@ -1,6 +1,6 @@
 ---
 layout: news
-title: Fixed Newlines and Scrypt Types
+title: Fixed Newlines and Script Types
 category: news
 ---
 
