@@ -28,3 +28,5 @@ the fix goes in this repository.
 # Author
 
 vim-scripts was written by [Scott Bronson](http://github.com/bronson).
+
+Thanks to [gmarik](http://github.com/gmarik).
