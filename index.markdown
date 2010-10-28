@@ -2,8 +2,10 @@
 layout: default
 title: About
 rss: /feeds/news.xml
+2col: true
 rsstitle: vim-scripts news feed
 ---
+<div markdown="1" class="grid_6">
 
 This mirror was inspired by [Pathogen]'s simple approach to [Vim] plugins.
 It provides access to any of the
@@ -16,18 +18,6 @@ We expect that things will be stable from here on out but these repos
 are still too new to be sure.  Enjoy using them and report
 any problems you see on the [issue tracker](http://github.com/vim-scripts/vim-scraper/issues)!
 
-# [Recent News](/news.html)
-
-No news is good news!
-
-{% for post in site.categories.news offset: 0 limit: 3 %}
-  <div id='news'>
-    <div class='newstitle'><a href="{{ post.url }}">{{ post.title }}</a></div>
-    <blockquote>
-      <p>{{ post.date | date_to_string }} &mdash; {{ post.content | strip_html | truncatewords: 25 }} (<a href="{{ post.url }}">Read more</a>)</p>
-    </blockquote>
-  </div>
-{% endfor %}
 
 # Usage
 
@@ -56,6 +46,24 @@ Finally, if you want to keep track of just how the scripts are being
 mirrored, follow the [vim-scraper](http://github.com/vim-scripts/vim-scraper)
 project or its
 [RSS feed](http://github.com/vim-scripts/vim-scraper/commits/master.atom)![feed](http://github.com/images/icons/feed.png).
+
+</div>
+
+
+<div id="news_col" markdown="1" class="grid_6">
+## [Recent News](/news.html)
+
+{% for post in site.categories.news offset: 0 limit: 3 %}
+  <div id='recent_news'>
+    <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+      {{ post.date | date_to_string }} &mdash; {{ post.content | strip_html | truncatewords: 25 }}<a class="more" href="{{ post.url }}"> →more</a>
+  </div>
+{% endfor %}
+
+[ →all news](/news.html)
+
+</div>
+
 
 [Pathogen]:http://github.com/tpope/vim-pathogen
 [Vim]:http://vim.org
