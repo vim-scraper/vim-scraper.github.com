@@ -28,6 +28,30 @@ and have them immediately available for use via [Pathogen].
 
 Still, it can be even easier.  See [Vim Plugin Managers](/tools.html).
 
+</div>
+
+
+<div id="news_col" markdown="1" class="grid_6">
+# [Recent News](/news.html)
+
+{% for post in site.categories.news offset: 0 limit: 3 %}
+<div id='recent_news'>
+  <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+  **{{ post.date | date_to_string }}** 
+
+  {{ post.content | strip_html | truncatewords: 25 }} 
+  [→more]({{ post.url }})
+
+
+</div>
+{% endfor %}
+
+[ →all news](/news.html)
+
+</div>
+
+<div markdown="1" class="grid_12">
+
 # Updates
 
 Watch the [news page](/news.html) or subscribe to
@@ -48,26 +72,6 @@ Finally, if you want to keep track of just how the scripts are being
 mirrored, follow the [vim-scraper](http://github.com/vim-scripts/vim-scraper)
 project or its
 [RSS feed](http://github.com/vim-scripts/vim-scraper/commits/master.atom)![feed](http://github.com/images/icons/feed.png).
-
-</div>
-
-
-<div id="news_col" markdown="1" class="grid_6">
-# [Recent News](/news.html)
-
-{% for post in site.categories.news offset: 0 limit: 3 %}
-<div id='recent_news'>
-  <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-  **{{ post.date | date_to_string }}** 
-
-  {{ post.content | strip_html | truncatewords: 25 }} 
-  [→more]({{ post.url }})
-
-
-</div>
-{% endfor %}
-
-[ →all news](/news.html)
 
 </div>
 
