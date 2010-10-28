@@ -7,9 +7,9 @@ rsstitle: vim-scripts news feed
 ---
 <div markdown="1" class="grid_6">
 
-This mirror was inspired by [Pathogen]'s simple approach to [Vim] plugins.
-It provides access to any of the
+[This mirror](http://github.com/vim-scripts) provides access to any of the 
 [scripts on vim.org](http://www.vim.org/scripts/) using [Git].
+It was inspired by [Pathogen]'s simple approach to [Vim] plugins.
 
 <h2><blockquote><a href="/scripts.html">The Scripts</a></blockquote></h2>
 
