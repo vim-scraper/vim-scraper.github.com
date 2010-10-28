@@ -25,8 +25,3 @@ the fix goes in this repository.
    [\[Issues\]](http://github.com/vim-scripts/vim-scripts.github.com/issues)
    [\[RSS Feed\]](http://github.com/vim-scripts/vim-scripts.github.com/commits/master.atom)
 
-# Author
-
-vim-scripts was written by [Scott Bronson](http://github.com/bronson).
-
-Thanks to [gmarik](http://github.com/gmarik).
