@@ -7,6 +7,8 @@ rsstitle: vim-scripts news feed
 ---
 <div markdown="1" class="grid_6">
 
+# About
+
 [This mirror](http://github.com/vim-scripts) provides access to any of the 
 [scripts on vim.org](http://www.vim.org/scripts/) using [Git].
 It was inspired by [Pathogen]'s simple approach to [Vim] plugins.
@@ -51,7 +53,7 @@ project or its
 
 
 <div id="news_col" markdown="1" class="grid_6">
-## [Recent News](/news.html)
+# [Recent News](/news.html)
 
 {% for post in site.categories.news offset: 0 limit: 3 %}
   <div id='recent_news'>
