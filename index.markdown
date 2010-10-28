@@ -56,10 +56,15 @@ project or its
 # [Recent News](/news.html)
 
 {% for post in site.categories.news offset: 0 limit: 3 %}
-  <div id='recent_news'>
-    <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-      {{ post.date | date_to_string }} &mdash; {{ post.content | strip_html | truncatewords: 25 }}<a class="more" href="{{ post.url }}"> →more</a>
-  </div>
+<div id='recent_news'>
+  <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+  **{{ post.date | date_to_string }}** 
+
+  {{ post.content | strip_html | truncatewords: 25 }} 
+  [→more]({{ post.url }})
+
+
+</div>
 {% endfor %}
 
 [ →all news](/news.html)

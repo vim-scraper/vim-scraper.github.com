@@ -100,14 +100,13 @@ table td {
 #content { /* Parent Wrapper for inside boxes */
 }
 
-#news_col .more,
-#news_col .more p{
-  text-align:right;
-  display:inline;
-  margin:0;
+#news_col strong {
+  font-weight:normal;
+  font-size: 80%;
+  float:left;
+  padding: 1em;
+  color: #AAA;
 }
-
-
 #footer {
   color: #888;
   font-size: 0.7em;
