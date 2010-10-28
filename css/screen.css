@@ -41,6 +41,10 @@ h3 {
   font-size: 1.1em;
 }
 
+table td {
+  border: none;
+}
+
 #header h2 {
   font-size: 30px;
   line-height: 0;
