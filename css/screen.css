@@ -1,0 +1,113 @@
+body {
+  font-family: Verdana,Geneva,sans-serif;
+}
+
+html {
+  overflow-y: scroll;  /* force scroll bar to be visible so no jumping */
+}
+
+a:link, a:visited {
+  color: #0044b3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  border: none;
+}
+
+pre, code {
+  font-family: "Monaco", "DejaVu Sans Mono", "Courier New", "Courier";
+}
+
+h1, h2, h3 {
+  font-family: Georgia,Utopia,Palatino,'Palatino Linotype',serif;
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.3em;
+  padding-bottom: 0.3em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+#header h2 {
+  font-size: 30px;
+  line-height: 0;
+  background: url('/images/vim-mirror.jpg') no-repeat; 
+  padding-top: 67px;
+  padding-left: 137px;
+  padding-bottom: 25px;
+}
+
+#header h2 a:link,
+#header h2 a:visited,
+#header h2 a:hover,
+#header h2 a:active {
+  color: #888;
+  font-style:italic;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#header h2 a:link span,
+#header h2 a:visited span,
+#header h2 a:hover span,
+#header h2 a:active span {
+  visibility:hidden;
+}
+
+
+#header .tagline {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#menu ol {
+  font-family: "Gill Sans";
+  font-size: 14pt;
+  text-align: center;
+  list-style: none;
+  line-height: 2em;
+  background-color: #f5f5f5;
+  padding:0;
+  margin:0;
+}
+
+#menu ol li {
+  /* padding: 0.3em 0 0.6em 0em; */
+  color: #669966;
+  padding: .5em;
+  padding-top: 0;
+  display: inline;
+}
+
+#content { /* Parent Wrapper for inside boxes */
+  margin-top: 2em;
+}
+
+#footer {
+  color: #888;
+  font-size: 0.7em;
+  /* margin: 2em 0 3em 0em; */
+  text-align:center;
+}
+
+#footer p {
+  padding: 1em;
+  border-top: 1px solid #ccc;
+}
+
+.allscripts {
+  /* border-bottom: 2px solid red;  */
+}

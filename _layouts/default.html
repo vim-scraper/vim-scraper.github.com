@@ -3,37 +3,42 @@
   <head>
     <title>Vim Scripts &mdash; {{ page.title }}</title>
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
-    <link rel="stylesheet" type="text/css" href="/css/default.css"/>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.3.0/build/base/base-min.css">
+    <link rel="stylesheet" type="text/css" href="/css/screen.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/960gs.css"/>
     {% if page.rss %}
       <link href="{{ page.rss }}" rel="alternate" title="{{ page.rsstitle }}" type="application/atom+xml" />
     {% endif %}
   </head>
 
   <body>
-    <div id='wrapper'>
-      <div id='header'>
-        <h2> <a href='/index.html'><span>Vim</span>-Scripts.org</a>
+      <div id='header' class="container_12">
+        <h2 class="grid_12"> <a href='/index.html'><span>Vim</span>-Scripts.org</a>
         </h2>
       </div>
-      <div id='sidebar'>
-        <ol class='toc'>
-          <li><a href='/index.html'>Home</a></li>
-          <li><a href='/news.html'>News</a></li>
-          <li><a href='/faq.html'>FAQ</a></li>
-          <li><a href='/tools.html'>Tools</a></li>
-          <li><a href='/support.html'>Support</a></li>
-          <li><a href='/development.html'>Devel</a></li>
-          <li><a href='/scripts.html'>All Scripts</a></li>
-          <li><a href='http://github.com/vim-scripts'>GitHub</a></li>
-        </ol>
+      <div class="container_12">
+        <div id='menu' class="grid_12">
+          <ol class='toc'>
+            <li><a href='/index.html'>Home</a></li>
+            <li><a href='/news.html'>News</a></li>
+            <li><a href='/faq.html'>FAQ</a></li>
+            <li><a href='/tools.html'>Tools</a></li>
+            <li><a href='/support.html'>Support</a></li>
+            <li><a href='/development.html'>Devel</a></li>
+            <li class="allscripts"><a href='/scripts.html' >All Scripts</a></li>
+            <li><a href='http://github.com/vim-scripts'>GitHub</a></li>
+          </ol>
+        </div>
       </div>
-      <div id='content'>
-        <h1 id='{{ page.title | downcase | replace(' ', '_') }}'>{{ page.title }}</h1>
-        {{ content }}
+      <div class="container_12">
+        <div id='content' class="grid_12">
+          <h1 id='{{ page.title | downcase | replace(' ', '_') }}'>{{ page.title }}</h1>
+          {{ content }}
+        </div>
       </div>
-      <div id='footer'>
-        Site created with <a href="http://github.com/mojombo/jekyll/wiki">Jekyll</a>.  Please <a href="http://github.com/vim-scripts/vim-scripts.github.com">suggest changes</a> as issues or patches.
+      <div id='footer' class="container_12">
+        <p class="grid_12"> Site created with <a href="http://github.com/mojombo/jekyll/wiki">Jekyll</a>.  Please <a href="http://github.com/vim-scripts/vim-scripts.github.com">suggest changes</a> as issues or patches.
+        </p>
       </div>
-    </div>
   </body>
 </html>
