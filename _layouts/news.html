@@ -1,6 +1,10 @@
 ---
 layout: default
 ---
-<div id='news'>
-{{ content }}
+<div id="news" >
+  <div  class="post">
+    <div class="content">
+    <span class="date">{{ page.date | date_to_string }}</span> {{ content }}
+    </div>
+  </div>
 </div>

@@ -31,18 +31,18 @@ Still, it can be even easier.  See [Vim Plugin Managers](/tools.html).
 </div>
 
 
-<div id="news_col" markdown="1" class="grid_6">
-# [Recent News](/news.html)
+<div id="news" class="grid_6">
+
+<h1><a href="/news.html">Recent News</a></h1>
 
 {% for post in site.categories.news offset: 0 limit: 3 %}
-<div id='recent_news'>
-  <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-  **{{ post.date | date_to_string }}** 
-
-  {{ post.content | strip_html | truncatewords: 25 }} 
-  [→more]({{ post.url }})
-
-
+<div class="post">
+    <h4 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+    <p class="content">
+    <span class="date">{{ post.date | date_to_string }}</span>
+    {{ post.content | strip_html | truncatewords: 25 }} 
+    <span markdown="1">[→more]({{ post.url }})</span>
+    </p>
 </div>
 {% endfor %}
 

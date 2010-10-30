@@ -101,13 +101,16 @@ table td {
 #content { /* Parent Wrapper for inside boxes */
 }
 
-#news_col strong {
-  font-weight:normal;
-  font-size: 80%;
-  float:left;
-  padding-right: 1em;
-  color: #AAA;
+#news .post p.content {
+  margin-top:0.5em;
 }
+
+#news .post .date {
+  color: #AAA;
+  font-size: 80%;
+  padding-right: 1em;
+}
+
 #footer {
   color: #888;
   font-size: 0.7em;

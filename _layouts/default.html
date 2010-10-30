@@ -11,7 +11,7 @@
     {% endif %}
   </head>
 
-  <body>
+  <body id='{{ page.title | strip_html | downcase | replace(' ', '_') }}'>
       <div id='header' class="container_12">
         <h2 class="grid_12"> <a href='/index.html'><span>Vim</span>-Scripts.org</a>
         </h2>
@@ -35,7 +35,7 @@
           {{ content }}
         {% else %}
           <div class="grid_12">
-            <h1 id='{{ page.title | downcase | replace(' ', '_') }}'>{{ page.title }}</h1>
+            <h1 >{{ page.title }}</h1>
             {{ content }}
           </div>
         {% endif %}
