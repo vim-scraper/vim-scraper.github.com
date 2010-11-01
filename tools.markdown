@@ -11,6 +11,8 @@ mirror even easier.
    environment and install and remove plugins using [Pathogen].
  * [vundle](http://github.com/gmarik/vundle) is similar and written
    in 100% vimscript.
+ * [jolt](http://github.com/vimjolts/jolt)
+    Vim Package Management written in python
  * Also see the alternatives below.  They don't use the mirror but
    some of them make downloading scripts much easier.
 
