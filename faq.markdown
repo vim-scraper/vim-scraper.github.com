@@ -83,9 +83,9 @@ from the one you're using on GitHub.  Go into your GitHub [account settings](htt
 and add your vim account's address as an alternate.
 
 
-**Q:** Why is my name just a garbled mass of letters in my commits.
+**Q:** Why is my name just a garbled mass of letters in my commits?
 
-**A:** You mean like [this commit](http://github.com/vim-scripts/update_vim/commit/4c3e52b0c6c42a30ac58fd7121fb01e42e66e0b6)
+**A:** Like [this commit](http://github.com/vim-scripts/update_vim/commit/4c3e52b0c6c42a30ac58fd7121fb01e42e66e0b6)
 from Ľubomír Host?
 You probably have a non-ascii character in your email address.
 GitHub doesn't currently display internationalized email addresses.
