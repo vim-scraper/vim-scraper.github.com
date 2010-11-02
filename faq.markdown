@@ -76,9 +76,18 @@ of your script's README on GitHub.
 appear in a new package on vim.org, they will quickly be mirrored here.
 
 
-**Q:** My commits in the scripts I wrote don't have my GitHub icon next to them.
+**Q:** My commits don't have my GitHub icon next to them.
 
-**A:** The email address you used on the vim scripts site is probably different
+**A:** The email address you used on vim.org is probably different
 from the one you're using on GitHub.  Go into your GitHub [account settings](https://github.com/account)
-and add your vim email address as an alternate email address.
+and add your vim account's address as an alternate.
+
+
+**Q:** Why is my name just a garbled mass of letters in my commits.
+
+**A:** You mean like [this commit](http://github.com/vim-scripts/update_vim/commit/4c3e52b0c6c42a30ac58fd7121fb01e42e66e0b6)
+from Ľubomír Host?
+You probably have a non-ascii character in your email address.
+GitHub doesn't currently display internationalized email addresses.
+There's a [feature request](http://support.github.com/discussions/suggestions/192-github-should-decode-names-in-international-email-addresses).
 
