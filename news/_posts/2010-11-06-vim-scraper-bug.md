@@ -1,6 +1,6 @@
 ---
 layout: news
-title: Fix a Scraper Bug
+title: Fixed a Scraper Bug
 category: news
 ---
 
@@ -36,4 +36,4 @@ scripts to be generated with files in the wrong place.
  * 2885 - gsession.vim
  * 3147 - wmgraphviz
 
-They have been regenerated.  Delete and re-clone!
+They have been regenerated with everything where it should be.  Delete and re-clone!
