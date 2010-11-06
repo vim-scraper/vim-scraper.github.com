@@ -1,6 +1,6 @@
 ---
 layout: news
-title: Small Fixes: \_options.vim and Emacs Swap Files
+title: Small Fixes: options.vim and Emacs Swap Files
 category: news
 ---
 
