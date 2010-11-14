@@ -1,23 +1,21 @@
 ---
 layout: news
-title: Remove Needless Directories
+title: Trimming Archive Hierarchy
 category: news
 ---
 
 A small refactoring allows the scraper to be a lot smarter about cleaning
-up archive hierarchies.  What do I mean?  Stuff like this:
+up hierarchies.  What do I mean?  Stuff like this:
 
     script-0.1/plugin/script.vim
     script-0.1/doc/script.txt
 
-That leading "script-0.1" should be removed.  It's not easy to figure
-out which can be removed and which ones need to be kept, especially
+That leading "script-0.1" should be removed.  It's not easy to determine
+which directories can be removed and which ones need to be kept, especially
 for a small script scraping robot.  There are as many different ways
 of naming directories as there are script authors.
 
-It's still not perfect (nor will it ever be), but it's much, much better.
-
-The following scripts have been improved:
+The following scripts have been fixed:
 
  * 0023 - EnhCommentify.vim
  * 0067 - nqc.vim
@@ -170,6 +168,10 @@ The following scripts have been improved:
  * 3303 - smartbd
  * 3304 - Gundo
 
-This was the last major deficiency in the scraper, fixed.
- Hopefully it's just minor cleanups from here on out.
+This was the last known big deficiency in the scraper.
+Hopefully it only needs minor cleanups from here on out.
+
+Big thanks to [rygwdn](https://github.com/rygwdn)
+for [the motivation](https://github.com/vim-scripts/vim-scraper/issues/10)
+to make this invasive a change.
 
