@@ -22,7 +22,7 @@ a proper revision history.
 Also, the following script has an invalid zipfile.  This was easy
 to fix.
 
- * 3281 - run_python_tests
+ * 3281 - run\_python\_tests
 
 If you've cloned any of these plugins, delete your copies and re-clone!
 
