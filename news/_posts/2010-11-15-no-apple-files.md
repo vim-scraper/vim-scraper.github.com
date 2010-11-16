@@ -23,3 +23,10 @@ The plugins who no longer carry .DS\_Store files:
  * 2883 - growlnotify.vim
  * 2890 - slurper.vim
 
+Also, minor fixups to two scripts: put the tags on the correct commits,
+and change the 'Syntax' directory to 'syntax' so the plugin will work
+on case-sensitive filenames too.
+
+ * 0790 - python.vim--Vasiliev
+ * 2651 - fitnesse.vim
+
