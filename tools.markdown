@@ -11,8 +11,6 @@ mirror even easier.
    environment and install and remove plugins using [Pathogen].
  * [vundle](http://github.com/gmarik/vundle) is similar and written
    in 100% vimscript.
- * [jolt](http://github.com/vimjolts/jolt)
-    Vim Package Management written in python
  * Also see the alternatives below.  They don't use the mirror but
    some of them make downloading scripts much easier.
 
@@ -43,6 +41,8 @@ these will.
  * [vim-addon-manager](http://github.com/MarcWeber/vim-addon-manager)
    is a package manager written 100% in VimL.
  * [Vimana](http://github.com/c9s/Vimana) is a Perl-based package manager.
+ * [jolt](http://github.com/vimjolts/jolt)
+    Vim Package Management written in python
  * [vim-nicktears](http://github.com/carllerche/vim-nicktears) manages
    Vim plugins using [Rubygems](http://rubygems.org/).
  * [Vim Script Updater](http://www.vim.org/scripts/script.php?script_id=3135)
