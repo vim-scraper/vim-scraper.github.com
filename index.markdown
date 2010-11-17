@@ -15,7 +15,7 @@ It was inspired by
 simple approach to
 [Vim](http://vim.org/) plugins.
 
-<h2><blockquote><a href="/scripts.html">The Scripts</a></blockquote></h2>
+<h2><blockquote><a href="/vim/scripts.html">The Scripts</a></blockquote></h2>
 
 **NOTE: we are in a beta period.**
 We expect that things will be stable from here on out but these repos
@@ -28,12 +28,12 @@ any problems you see on the [issue tracker](http://github.com/vim-scripts/vim-sc
 It's pretty easy to clone plugins into your ~/.vim/bundles directory
 and have them immediately available for use via Pathogen.
 
-Still, it can be even easier.  See [Vim Plugin Managers](/tools.html).
+Still, it can be even easier.  See [Vim Plugin Managers](/vim/tools.html).
 
 
 # Updates
 
-Watch the [news page](/news.html) or subscribe to
+Watch the [news page](/vim/news.html) or subscribe to
 [its feed](/feeds/news.xml)![feed](http://github.com/images/icons/feed.png)
 to keep track of what's happening on this mirror.  This should be
 fairly low traffic.

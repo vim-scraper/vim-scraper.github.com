@@ -7,8 +7,8 @@ title: FAQ
 ### For Script Users
 **Q:** How do I find a script?
 
-**A:** Goto [all scripts](/scripts.html), 
-search for the script by name, 
+**A:** Goto [all scripts](/vim/scripts.html),
+search for the script by name,
 follow github link to to corresponding git repository.
 
 **Q:** Can you fix a bug in one of your scripts?
