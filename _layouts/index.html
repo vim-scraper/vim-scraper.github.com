@@ -1,0 +1,22 @@
+---
+layout: default
+2col: true
+---
+<div class="grid_6">
+  {{ content }}
+</div>
+
+<div id="news" class="grid_6">
+  <h1><a href="/news.html">Recent News</a></h1>
+  {% for post in site.categories.news offset: 0 limit: 3 %}
+  <div class="post">
+    <h4 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+    <p class="content">
+    <span class="date">{{ post.date | date_to_string }}</span>
+    {{ post.content | strip_html | truncatewords: 25 }}
+    <a href="{{ post.url }}">→more</a>
+    </p>
+  </div>
+  {% endfor %}
+</div>
+

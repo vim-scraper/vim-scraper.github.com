@@ -1,6 +1,6 @@
 ---
 layout: news
-title: Suppress Apple DS\_Store Files
+title: Suppress Apple DS_Store Files
 category: news
 ---
 
