@@ -1,11 +1,24 @@
 ---
-layout: index
+layout: default
 title: About
 rss: /feeds/news.xml
 rsstitle: vim-scripts news feed
 ---
 
-# About
+<div id="news" class="grid_5" style="float:right; padding-left:3em; padding-bottom:3em;">
+  <h1><a href="/news.html">Recent News</a></h1>
+  {% for post in site.categories.news offset: 0 limit: 3 %}
+  <div class="post">
+    <h4 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+    <p class="content">
+    <span class="date">{{ post.date | date_to_string }}</span>
+    {{ post.content | strip_html | truncatewords: 25 }}
+    <a href="{{ post.url }}">→more</a>
+    </p>
+  </div>
+  {% endfor %}
+</div>
+
 
 This mirror provides access to any of the scripts
 [on vim.org](http://www.vim.org/scripts/) using
@@ -15,7 +28,6 @@ It was inspired by
 simple approach to
 [Vim](http://vim.org/) plugins.
 
-<h2><blockquote><a href="/vim/scripts.html">The Scripts</a></blockquote></h2>
 
 **NOTE: we are in a beta period.**
 We expect that things will be stable from here on out but these repos
@@ -25,10 +37,14 @@ any problems you see on the [issue tracker](http://github.com/vim-scripts/vim-sc
 
 # Usage
 
+See the [All Scripts](/vim/scripts.html) tab above.
+
 It's pretty easy to clone plugins into your ~/.vim/bundles directory
 and have them immediately available for use via Pathogen.
 
 Still, it can be even easier.  See [Vim Plugin Managers](/vim/tools.html).
+
+
 
 
 # Updates
