@@ -4,7 +4,32 @@ layout: default
 <div id="news" >
   <div  class="post">
     <div class="content">
-    <span class="date">{{ page.date | date_to_string }}</span> {{ content }}
+
+      <span class="prevnext">
+        {% if page.previous.url %}
+          &laquo;
+          {{ page.previous.date | date: "%d %b" }}
+          <a href="{{page.previous.url}}" title="Previous Post:
+            {{page.previous.title}}">{{page.previous.title}}</a>
+          Prev
+        {% endif %}
+
+        {% if page.previous.url and page.next.url %}
+          &nbsp; &mdash; &nbsp;
+        {% endif %}
+
+        {% if page.next.url %}
+          Next
+          <a href="{{page.next.url}}" title="next Post:
+            {{page.next.title}}">{{page.next.title}}</a>
+          {{ page.next.date | date: "%d %b" }}
+          &raquo;
+        {% endif %}
+      </span>
+
+      <h2>{{ page.title }}</h2>
+      <span class="date">{{ page.date | date_to_string }}</span>
+      {{ content }}
     </div>
   </div>
 </div>
