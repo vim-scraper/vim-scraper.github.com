@@ -9,7 +9,7 @@ title: FAQ
 
 **A:** Goto [all scripts](/vim/scripts.html),
 search for the script by name,
-follow github link to to corresponding git repository.
+follow github link to corresponding git repository.
 
 **Q:** Can you fix a bug in one of your scripts?
 
