@@ -4,13 +4,13 @@ title: Unfuddling Email Addresses
 category: news
 ---
 
-Some time around Feb 15th, vim.org modified the way it presents
+Some time around February 15, vim.org modified the way it presents
 the email adddresses of script authors.  They just replaced @ and .
 with images, but this caused the vim-scripts.org scraper to
-push 29 invalid repositories before this could be
+push 29 invalid repositories before it could be
 [worked around](https://github.com/vim-scraper/vim-scraper/commit/938d48b062f4f5b242a8787d3ecb30662bcb2e59).
 
-The following repositories have been fixed and re-uploaded:
+The following scripts have been fixed and re-uploaded:
 
  * activity-log
  * AuthorInfo
@@ -44,7 +44,6 @@ The following repositories have been fixed and re-uploaded:
 
 There are a number of other changes
 ([like this](https://github.com/crissmancd/vim_scripts_redesign))
-queued up for vim-scripts.org but $dayjob has been taking up all my time.
-Big thanks to gmarik for keeping keeping the fires burning
-while I'm out.
+queued up for vim-scripts.org but $dayjob has been taking up a lot of imte.
+Big thanks to gmarik for keeping keeping the fires burning.
 
