@@ -5,7 +5,7 @@
 
 <head>
 
-  <base src="/new/" />
+  <base href="/new/" />
 
 	<meta charset="utf-8" />
 
@@ -20,14 +20,14 @@
   {% endif %}
 
   <!--[if ! lte IE 6]><!-->
-  	<link rel="stylesheet" href="/css/core.css" />
+  	<link rel="stylesheet" href="/new/css/core.css" />
   <!--<![endif]-->
 
 	<!--[if lte IE 6]>
     <link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css">
   <![endif]-->
 
-	<script src="/js/modernizr-1.6.min.js"></script>
+	<script src="/new/js/modernizr-1.6.min.js"></script>
 
 </head>
 
@@ -56,12 +56,12 @@
 
   {% if page.recent_news %}
   <section id="recent-news">
-    <h2><a href="/vim/news.html">Recent News</a></h2>
+    <h2><a href="vim/news.html">Recent News</a></h2>
     <ul class="posts big-list hfeed">
     {% for post in site.categories.news offset: 0 limit: 3 %}
       <li>
         <article class="post hentry">
-          <header><h1 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h1></header>
+          <header><h1 class="entry-title"><a href="/new{{ post.url }}">{{ post.title }}</a></h1></header>
           <footer><time datetime="{{ post.date | date_to_string }}" class="updated" pubdate>{{ post.date | date_to_string }}</time></footer>
           <p class="entry-content">{{ post.content | strip_html | truncatewords: 25 }} <a href="{{ post.url }}" class="bookmark" rel="bookmark">more &raquo;</a></p>
         </article>
