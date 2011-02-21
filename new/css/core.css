@@ -178,6 +178,7 @@ nav[role="navigation"] a:hover, nav[role="navigation"] a:active {
 #tools nav .tools:after,
 #support nav .support:after,
 #scripts nav .scripts:after,
+#development nav .dev:after,
 #dev nav .dev:after {
   content: "";
   border: 5px solid transparent;

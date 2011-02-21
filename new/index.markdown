@@ -1,6 +1,6 @@
 ---
 layout: new_default
-title: Vim Scripts
+title: About
 rss: /feeds/news.xml
 recent_news: true
 rsstitle: vim-scripts news feed
