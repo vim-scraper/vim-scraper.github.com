@@ -13,11 +13,13 @@
 
   <body id='{{ page.title | strip_html | downcase | replace(' ', '_') }}'>
       <div id='header' class="container_12">
-        <h2 class="grid_12"> <a href='/index.html'><span>Vim</span>-Scripts.org</a>
-        </h2>
+        <div class="grid_10 prefix_1 suffix_1">
+          <h2 > <a href='/index.html'><span>Vim</span>-Scripts.org</a>
+          </h2>
+        </div>
       </div>
       <div class="container_12">
-        <div id='menu' class="grid_12">
+        <div id='menu' class="grid_10 prefix_1 suffix_1">
           <ol class='toc'>
             <li><a href='/index.html'>About</a></li>
             <li><a href='/vim/news.html'>News</a></li>
@@ -31,13 +33,15 @@
         </div>
       </div>
       <div id="content" class="container_12">
-        {% if page.no_title != true %}
-        <h1> {{ page.title }} </h1>
-        {% endif %}
-        {{ content }}
+        <div class="grid_10 prefix_1 suffix_1">
+          {% if page.no_title != true %}
+          <h1> {{ page.title }} </h1>
+          {% endif %}
+          {{ content }}
+        </div>
       </div>
       <div id='footer' class="container_12">
-        <p class="grid_12"> Site created with <a href="http://github.com/mojombo/jekyll/wiki">Jekyll</a>.  Please <a href="http://github.com/vim-scripts/vim-scripts.github.com">suggest changes</a> as issues or patches.
+        <p class="grid_10 prefix_1 suffix_1"> Site created with <a href="http://github.com/mojombo/jekyll/wiki">Jekyll</a>.  Please <a href="http://github.com/vim-scripts/vim-scripts.github.com">suggest changes</a> as issues or patches.
         </p>
       </div>
   </body>
