@@ -19,8 +19,8 @@ simple approach to
 
 **NOTE: we are in a beta period.**
 We expect that things will be stable from here on out but these repos
-are still too new to be sure.  Enjoy using them and report
-any problems you see on the [issue tracker](http://github.com/vim-scripts/vim-scraper/issues)!
+are still too new to be sure.  Enjoy using them and visit the
+[Support tab](/vim/support.html) if you see any problems.
 
 
 ## Usage

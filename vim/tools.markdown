@@ -59,9 +59,7 @@ Also see the [question on StackOverflow](http://stackoverflow.com/questions/2458
 # Contributions
 
 Suggestions for this list are warmly welcomed!
-[File an issue](http://github.com/vim-scripts/vim-scripts.github.com/issues)
-or email
-[brons_vimtools@rinspin.com](mailto:brons_vimtools@rinspin.com).
+See the [Support tab](/vim/support.html) for how to submit them.
 
 [Pathogen]:http://github.com/tpope/vim-pathogen
 
