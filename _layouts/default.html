@@ -9,10 +9,30 @@
     {% if page.rss %}
       <link href="{{ page.rss }}" rel="alternate" title="{{ page.rsstitle }}" type="application/atom+xml" />
     {% endif %}
+    <link type="text/css" href="/css/smoothness/jquery-ui-1.8.11.custom.css" rel="stylesheet" />	
+    <script type="text/javascript" src="/js/jquery-1.5.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.8.11.custom.min.js"></script>
+    <script>
+      $(function() {
+        $("#scripts").autocomplete({
+          select: function(ev,ui) { $(window.location).attr('href', "http://github.com/vim-scripts/" + ui.item.value); }
+        });
+        // load the script names after the user focuses the search box
+        $("#scripts").bind("focus.scripts", function(ev,ui) {
+          scripts = $(this);
+          scripts.unbind("focus.scripts"); // don't hammer the server
+          $.getJSON('/api/scripts.json', function(data) {
+            scripts.autocomplete("option", "source", data);
+            // if the ajax call fails, should we re-bind the focus listener to try again?
+          });
+        });
+      });
+    </script>
   </head>
 
   <body id='{{ page.title | strip_html | downcase | replace(' ', '_') }}'>
       <div id='header' class="container_12">
+        <input type="text" name="scripts" id="scripts" />
         <div class="grid_10 prefix_1 suffix_1">
           <h2 > <a href='/index.html'><span>Vim</span>-Scripts.org</a>
           </h2>
