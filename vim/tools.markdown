@@ -3,8 +3,7 @@ layout: default
 title: Tools
 ---
 
-These projects attempt to make downloading plugins from the
-mirror even easier.
+These projects work closely with the vim-scripts.org mirror:
 
  * [vundle](http://github.com/gmarik/vundle) makes it easy to find
    and install plugins without ever leaving the Vim environment.
@@ -16,12 +15,12 @@ mirror even easier.
  * Also see the alternatives below.  They don't use the mirror but
    some of them make downloading scripts much easier.
 
-These help manage the plugins once they're downloaded.
+and these help manage the plugins once they're downloaded.
 
- * [Pathogen] allows you to store your scripts individually in
-   ~/.vim/bundles instead of one gigantic communal directory tree.
+ * [Pathogen](http://github.com/tpope/vim-pathogen) allows you to store your scripts
+   individually in ~/.vim/bundles instead of one gigantic communal directory tree.
  * [tplugin](http://github.com/tomtom/tplugin_vim)
-   can be thought of as a mix of [Pathogen] and
+   can be thought of as a mix of Pathogen and
    [AsNeeded](http://github.com/vim-scripts/AsNeeded).
 
 # Manual
@@ -36,12 +35,13 @@ by hand, here are some docs.
 
 # Alternatives
 
-Vim users have created a number of techniques to manage plugins
-over the years.  If the mirror doesn't suit your needs, maybe one of
-these will.
+These perform their own package management instead of using the
+vim-scripts.org mirror.
 
  * [vim-addon-manager](http://github.com/MarcWeber/vim-addon-manager)
    is a package manager written 100% in VimL.
+ * [Janus](http://github.com/carlhuda/janus) is a collection of plugins but
+   does include its own plugin manager.
  * [Vimana](http://github.com/c9s/Vimana) is a Perl-based package manager.
  * [jolt](http://github.com/vimjolts/jolt)
     Vim Package Management written in python

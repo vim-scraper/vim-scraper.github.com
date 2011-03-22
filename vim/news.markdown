@@ -2,7 +2,7 @@
 layout: default
 title: News
 rss: /feeds/news.xml
-rsstitle: vim-scripts news feed
+rsstitle: vim-scripts newsfeed
 ---
 
 {% for post in site.categories.news %}
