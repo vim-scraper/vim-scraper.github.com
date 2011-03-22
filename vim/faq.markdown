@@ -5,7 +5,7 @@ comments: true
 ---
 
 
-### For Script Users
+## For Script Users
 
 **Q:** Can you fix a bug in one of your scripts?
 
@@ -36,7 +36,7 @@ RSS feed.  The most recent changes can be seen on the
 <a href="http://github.com/vim-scripts">GitHub page</a>.
 
 
-### For Script Developers
+## For Script Developers
 
 **Q:** Can I point the vim-scripts repo at my official GitHub repo?<br/>
 
