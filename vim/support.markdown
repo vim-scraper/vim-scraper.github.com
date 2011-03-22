@@ -10,7 +10,7 @@ or can't immediately be used with Pathogen.
 * <http://github.com/vim-scraper/vim-scraper/issues>
 
 **NOTE:** if that link doesn't work, use <http://github.com/vim-scripts/vim-scraper/issues>
-and see [Combining Issue Trackers](news/2011/03/21/issues-are-moving.html) for why.
+and see [Combining Issue Trackers](/news/2011/03/21/issues-are-moving.html) for why.
 Hopefully GitHub makes the change soon.
 
 If you'd like to report on a bug in a Vim script, contact the script's original
