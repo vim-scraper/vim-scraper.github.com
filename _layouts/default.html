@@ -48,7 +48,7 @@
             var disqus_shortname = 'vimscripts';
             var disqus_identifier = '{{ page.url }}';
             var disqus_url = 'http://vim-scripts.org{{ page.url }}';
-            var disqus_title = '{{ page.title }}';
+            var disqus_title = '{{ page.title | escape | replace: "'", "\\'" }}';
             (function() {
               var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
               dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
