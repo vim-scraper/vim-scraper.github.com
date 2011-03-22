@@ -44,6 +44,6 @@ The following scripts have been fixed and re-uploaded:
 
 There are a number of other changes
 ([like this](https://github.com/crissmancd/vim_scripts_redesign))
-queued up for vim-scripts.org but $dayjob has been taking up a lot of imte.
+queued up for vim-scripts.org but $dayjob has been taking up a lot of time.
 Big thanks to gmarik for keeping keeping the fires burning.
 
