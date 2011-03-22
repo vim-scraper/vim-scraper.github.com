@@ -1,6 +1,7 @@
 ---
 layout: default
 title: FAQ
+comments: true
 ---
 
 

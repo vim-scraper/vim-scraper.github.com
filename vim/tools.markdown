@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Tools
+comments: true
 ---
 
 These projects work closely with the vim-scripts.org mirror:
@@ -55,11 +56,4 @@ vim-scripts.org mirror.
    A front-end for GetLatestVimScripts.
 
 Also see the [question on StackOverflow](http://stackoverflow.com/questions/2458398/package-management-for-vim).
-
-# Contributions
-
-Suggestions for this list are warmly welcomed!
-See the [Support tab](/vim/support.html) for how to submit them.
-
-[Pathogen]:http://github.com/tpope/vim-pathogen
 
