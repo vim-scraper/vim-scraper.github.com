@@ -6,12 +6,6 @@ comments: true
 
 
 ### For Script Users
-**Q:** How do I find a script?
-
-**A:** Go to [all scripts](/vim/scripts.html),
-search for the script by name,
-follow github link to corresponding git repository.
-
 
 **Q:** Can you fix a bug in one of your scripts?
 
@@ -32,7 +26,7 @@ and we'll fix the scraper and regenerate the script.
 
 **Q:** I sent you a messsage or pull request.  Why don't you respond?
 
-vim-scripts is just a robot.
+**A:** vim-scripts is just a robot.
 
 
 **Q:** Is the mirror up-to-date?
