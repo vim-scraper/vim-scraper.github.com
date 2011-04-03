@@ -4,6 +4,8 @@ title: Tools
 comments: true
 ---
 
+## Tools
+
 These projects work closely with the vim-scripts.org mirror:
 
  * [vundle](http://github.com/gmarik/vundle) makes it easy to find
@@ -24,7 +26,7 @@ and these help manage the plugins once they're downloaded.
    can be thought of as a mix of Pathogen and
    [AsNeeded](http://github.com/vim-scripts/AsNeeded).
 
-# Manual
+### Manual
 
 Less software is more.  If you want to manage your plugins
 by hand, here are some docs.
@@ -34,7 +36,7 @@ by hand, here are some docs.
  * [The Modern Vim Config with Pathogen](http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen),
    a blog post by Tammer Saleh.
 
-# Alternatives
+### Alternatives
 
 These perform their own package management instead of using the
 vim-scripts.org mirror.

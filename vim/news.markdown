@@ -5,18 +5,24 @@ rss: /feeds/news.xml
 rsstitle: vim-scripts newsfeed
 ---
 
+## News
+
 {% for post in site.categories.news %}
 <div class="post">
-  <h2 class="title">
-    <a href="{{ post.url }}">{{ post.title }}</a>
-  </h2>
-  <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">comments</a>
-  <p class="content">
+  <div class="header">
+    <h4 class="title">
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </h4>
     <span class="date">{{ post.date | date_to_string }}</span>
-      {{ post.content | strip_html | truncatewords: 25 }}
-    <a href="{{ post.url }}">→more</a>
-  </p>
+ </div>
+
+ <div class="content">
+  {{ post.content | strip_html | truncatewords: 25 }}
+  <a href="{{ post.url }}">→more</a>
+ </div>
+ <p><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">comments</a></p>
 </div>
+
 {% endfor %}
 
 <script type="text/javascript">

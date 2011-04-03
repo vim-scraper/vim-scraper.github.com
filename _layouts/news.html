@@ -2,11 +2,19 @@
 layout: default
 comments: true
 ---
+
 <div id="news" >
   <div  class="post">
     <div class="content">
 
-      <span class="prevnext">
+
+      <h2>{{ page.title }}</h2>
+      <span class="date">{{ page.date | date_to_string }}</span>
+        {{ content }}
+    </div>
+  </div>
+
+      <p class="prevnext">
         {% if page.previous.url %}
           &laquo;
           {{ page.previous.date | date: "%d %b" }}
@@ -24,11 +32,5 @@ comments: true
           {{ page.next.date | date: "%d %b" }}
           &raquo;
         {% endif %}
-      </span>
-
-      <h2>{{ page.title }}</h2>
-      <span class="date">{{ page.date | date_to_string }}</span>
-        {{ content }}
-    </div>
-  </div>
+      </p>
 </div>

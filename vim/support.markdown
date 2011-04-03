@@ -3,6 +3,8 @@ layout: default
 title: Support
 ---
 
+## Support
+
 File an issue on the vim-scripts.org issue tracker.
 
 * <http://github.com/vim-scraper/vim-scraper/issues>
