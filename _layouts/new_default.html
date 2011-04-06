@@ -36,13 +36,13 @@
     <h1><a href="/index.html" rel="home">Vim Scripts</a></h1>
     <nav role="navigation">
       <ul>
-        <li class="about"><a href="/new/index.html" rel="home">About</a></li>
-        <li class="news"><a href="/new/vim/news.html" rel="news">News</a></li>
-        <li class="faq"><a href="/new/vim/faq.html">FAQ</a></li>
-        <li class="tools"><a href="/new/vim/tools.html">Tools</a></li>
-        <li class="support"><a href="/new/vim/support.html">Support</a></li>
-        <li class="dev"><a href="/new/vim/development.html">Dev</a></li>
-        <li class="scripts"><a href="/new/vim/scripts.html">All Scripts</a></li>
+        <li class="about"><a href="/vim-scripts.org-ccrissman/new/index.html" rel="home">About</a></li>
+        <li class="news"><a href="/vim-scripts.org-ccrissman/new/vim/news.html" rel="news">News</a></li>
+        <li class="faq"><a href="/vim-scripts.org-ccrissman/new/vim/faq.html">FAQ</a></li>
+        <li class="tools"><a href="/vim-scripts.org-ccrissman/new/vim/tools.html">Tools</a></li>
+        <li class="support"><a href="/vim-scripts.org-ccrissman/new/vim/support.html">Support</a></li>
+        <li class="dev"><a href="/vim-scripts.org-ccrissman/new/vim/development.html">Dev</a></li>
+        <li class="scripts"><a href="/vim-scripts.org-ccrissman/new/vim/scripts.html">All Scripts</a></li>
         <li class="github"><a href="http://github.com/vim-scripts" rel="external">GitHub</a></li>
       </ul>
     </nav>
@@ -61,7 +61,7 @@
     {% for post in site.categories.news offset: 0 limit: 3 %}
       <li>
         <article class="post hentry">
-          <header><h1 class="entry-title"><a href="/new{{ post.url }}">{{ post.title }}</a></h1></header>
+          <header><h1 class="entry-title"><a href="/vim-scripts.org-ccrissman/new{{ post.url }}">{{ post.title }}</a></h1></header>
           <footer><time datetime="{{ post.date | date_to_string }}" class="updated" pubdate>{{ post.date | date_to_string }}</time></footer>
           <p class="entry-content">{{ post.content | strip_html | truncatewords: 25 }} <a href="{{ post.url }}" class="bookmark" rel="bookmark">more &raquo;</a></p>
         </article>
