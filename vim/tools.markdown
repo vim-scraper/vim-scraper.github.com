@@ -45,6 +45,8 @@ vim-scripts.org mirror.
    is a package manager written 100% in VimL.
  * [Janus](http://github.com/carlhuda/janus) is a collection of plugins but
    does include its own plugin manager.
+ * [Vimpire](https://bitbucket.org/sharat87/vimpire) reads bundle tags
+   from .vimrc and updates plugins to match.  Written in Python, supports Mercurial.
  * [Vimana](http://github.com/c9s/Vimana) is a Perl-based package manager.
  * [jolt](http://github.com/vimjolts/jolt)
     Vim Package Management written in python
