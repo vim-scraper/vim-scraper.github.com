@@ -40,7 +40,6 @@ Still, it can be even easier.  See [Vim Plugin Managers](/vim/tools.html).
 * or subscribe to your favorite [scripts](http://github.com/vim-scripts/) feeds 
 
 
-{% if page.recent_news %}
 <div id="recent-news">
   <h2><a href="vim/news.html">Recent News</a></h2>
   <ul class="posts big-list hfeed">
@@ -54,8 +53,6 @@ Still, it can be even easier.  See [Vim Plugin Managers](/vim/tools.html).
     </li>
   {% endfor %}
 </div>
-{% endif %}
-
 
 
 <script type="text/javascript">
