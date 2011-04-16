@@ -70,23 +70,6 @@
     {{ content }}
   <section>
 
-  {% if page.recent_news %}
-  <section id="recent-news">
-    <h2><a href="vim/news.html">Recent News</a></h2>
-    <ul class="posts big-list hfeed">
-    {% for post in site.categories.news offset: 0 limit: 3 %}
-      <li>
-        <article class="post hentry">
-          <header><h1 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h1></header>
-          <footer><time datetime="{{ post.date | date_to_string }}" class="updated" pubdate>{{ post.date | date_to_string }}</time></footer>
-          <p class="entry-content">{{ post.content | strip_html | truncatewords: 25 }} <a href="{{ post.url }}" class="bookmark" rel="bookmark">more &raquo;</a></p>
-        </article>
-      </li>
-    {% endfor %}
-  </section>
-  {% endif %}
-
-
   <section id='comments'>
     <p>&nbsp;</p>
     {% if page.comments %}

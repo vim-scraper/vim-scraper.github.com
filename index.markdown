@@ -2,7 +2,6 @@
 layout: default
 title: About
 rss: /feeds/news.xml
-recent_news: true
 rsstitle: vim-scripts news feed
 ---
 
@@ -41,25 +40,23 @@ Still, it can be even easier.  See [Vim Plugin Managers](/vim/tools.html).
 * or subscribe to your favorite [scripts](http://github.com/vim-scripts/) feeds 
 
 
-<div id="news" class="" >
- <h2><a href="/vim/news.html">Recent News</a></h2>
- {% for post in site.categories.news offset: 0 limit: 3 %}
-<div class="post">
-  <div class="header">
-    <h4 class="title">
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </h4>
-    <span class="date">{{ post.date | date_to_string }}</span>
- </div>
+{% if page.recent_news %}
+<div id="recent-news">
+  <h2><a href="vim/news.html">Recent News</a></h2>
+  <ul class="posts big-list hfeed">
+  {% for post in site.categories.news offset: 0 limit: 3 %}
+    <li>
+      <article class="post hentry">
+        <header><h1 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h1></header>
+        <footer><time datetime="{{ post.date | date_to_string }}" class="updated" pubdate>{{ post.date | date_to_string }}</time></footer>
+        <p class="entry-content">{{ post.content | strip_html | truncatewords: 25 }} <a href="{{ post.url }}" class="bookmark" rel="bookmark">more &raquo;</a></p>
+      </article>
+    </li>
+  {% endfor %}
+</div>
+{% endif %}
 
- <div class="content">
-  {{ post.content | strip_html | truncatewords: 25 }}
-  <a href="{{ post.url }}">→more</a>
- </div>
- <p><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">comments</a></p>
-</div>
- {% endfor %}
-</div>
+
 
 <script type="text/javascript">
   var disqus_shortname = 'vimscripts';

@@ -8,19 +8,17 @@ rsstitle: vim-scripts newsfeed
 ## News
 
 {% for post in site.categories.news %}
-<div class="post">
-  <div class="header">
-    <h4 class="title">
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </h4>
-    <span class="date">{{ post.date | date_to_string }}</span>
- </div>
-
- <div class="content">
-  {{ post.content | strip_html | truncatewords: 25 }}
-  <a href="{{ post.url }}">→more</a>
- </div>
- <p><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">comments</a></p>
+<div id="news">
+  <ul class="posts big-list hfeed">
+  {% for post in site.categories.news %}
+    <li>
+      <article class="post hentry">
+        <header><h1 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h1></header>
+        <footer><time datetime="{{ post.date | date_to_string }}" class="updated" pubdate>{{ post.date | date_to_string }}</time></footer>
+        <p class="entry-content">{{ post.content | strip_html | truncatewords: 25 }} <a href="{{ post.url }}" class="bookmark" rel="bookmark">more &raquo;</a></p>
+      </article>
+    </li>
+  {% endfor %}
 </div>
 
 {% endfor %}
