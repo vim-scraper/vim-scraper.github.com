@@ -1,11 +1,10 @@
 ---
 layout: default
 ---
-<div id="news" >
-  <div  class="post">
-    <div class="content">
 
-      <span class="prevnext">
+<section id="news-show">
+
+  <nav>
         {% if page.previous.url %}
           &laquo;
           {{ page.previous.date | date: "%d %b" }}
@@ -25,9 +24,13 @@ layout: default
         {% endif %}
       </span>
 
-      <h2>{{ page.title }}</h2>
-      <span class="date">{{ page.date | date_to_string }}</span>
+  </nav>
+
+  <article class="post hentry">
+    <header><h1 class="entry-title">{{ page.title }}</h1></header>
+    <footer><time datetime="{{ page.date | date_to_string }}" class="updated" pubdate>{{ page.date | date_to_string }}</time></footer>
+
+
       {{ content }}
-    </div>
-  </div>
-</div>
+    </article>
+</section>

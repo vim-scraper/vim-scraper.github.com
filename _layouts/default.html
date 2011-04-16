@@ -1,70 +1,74 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title>Vim Scripts: {{ page.title }}</title>
-    <base href="/vim-scripts.org-ccrissman/"/>
-    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
-    <link rel="stylesheet" type="text/css" href="/css/screen.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/960gs.css"/>
-    {% if page.rss %}
-      <link href="{{ page.rss }}" rel="alternate" title="{{ page.rsstitle }}" type="application/atom+xml" />
-    {% endif %}
-    <link type="text/css" href="/css/smoothness/jquery-ui-1.8.11.custom.css" rel="stylesheet" />	
-    <script type="text/javascript" src="/js/jquery-1.5.1.min.js"></script>
-    <script type="text/javascript" src="/js/jquery-ui-1.8.11.custom.min.js"></script>
-    <script>
-      $(function() {
-        $("#scripts").autocomplete({
-          minLength: 2,
-          select: function(ev,ui) { $(window.location).attr('href', "http://github.com/vim-scripts/" + ui.item.value); }
-        });
-        // load the script names after the user focuses the search box
-        $("#scripts").bind("focus.scripts", function(ev,ui) {
-          scripts = $(this);
-          scripts.unbind("focus.scripts"); // don't hammer the server
-          $.getJSON('/api/scripts.json', function(data) {
-            scripts.autocomplete("option", "source", data);
-            // if the ajax call fails, should we re-bind the focus listener to try again?
-          });
-        });
-      });
-    </script>
-  </head>
+<!DOCTYPE html>
 
-  <body id='{{ page.title | strip_html | downcase | replace(' ', '_') }}'>
-      <div id='header' class="container_12">
-        <input type="text" name="scripts" id="scripts" />
-        <div class="grid_10 prefix_1 suffix_1">
-          <h2 > <a href='/index.html'><span>Vim</span>-Scripts.org</a>
-          </h2>
-        </div>
-      </div>
-      <div class="container_12">
-        <div id='menu' class="grid_10 prefix_1 suffix_1">
-          <ol class='toc'>
-            <li><a href='/index.html'>About</a></li>
-            <li><a href='/vim/news.html'>News</a></li>
-            <li><a href='/vim/faq.html'>FAQ</a></li>
-            <li><a href='/vim/tools.html'>Tools</a></li>
-            <li><a href='/vim/support.html'>Support</a></li>
-            <li class="allscripts"><a href='/vim/scripts.html' >Scripts</a></li>
-            <li><a href='http://github.com/vim-scripts'>GitHub</a></li>
-          </ol>
-        </div>
-      </div>
-      <div id="content" class="container_12">
-        <div class="grid_10 prefix_1 suffix_1">
-          {% if page.no_title != true %}
-          <h1> {{ page.title }} </h1>
-          {% endif %}
-          {{ content }}
-        </div>
-      </div>
-      <!--
-      <div id='footer' class="container_12">
-        <p class="grid_10 prefix_1 suffix_1"> Site created with <a href="http://github.com/mojombo/jekyll/wiki">Jekyll</a>.  Please <a href="http://github.com/vim-scripts/vim-scripts.github.com">suggest changes</a> as issues or patches.
-        </p>
-      </div>
-      -->
-  </body>
+<html lang="en" dir="ltr" class="no-js">
+<!-- the "no-js" class is for Modernizr. -->
+
+<head>
+
+	<meta charset="utf-8" />
+
+	<title>Vim Scripts</title>
+
+	<meta name="description" content="This mirror provides access to any of the scripts on vim.org using Git. It was inspired by Pathogen's simple approach to Vim plugins." />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  {% if page.rss %}
+    <link href="{{ page.rss }}" rel="alternate" title="{{ page.rsstitle }}" type="application/atom+xml" />
+  {% endif %}
+
+  <!--[if ! lte IE 6]><!-->
+  	<link rel="stylesheet" href="/css/core.css" />
+  <!--<![endif]-->
+
+	<!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css">
+  <![endif]-->
+
+	<script src="/js/modernizr-1.6.min.js"></script>
+
+</head>
+
+<body id='{{ page.title | strip_html | downcase | replace(' ', '_') }}'>
+  <header role="banner">
+    <h1><a href="/index.html" rel="home">Vim Scripts</a></h1>
+    <nav role="navigation">
+      <ul>
+        <li class="about"><a href="/index.html" rel="home">About</a></li>
+        <li class="news"><a href="/vim/news.html" rel="news">News</a></li>
+        <li class="faq"><a href="/vim/faq.html">FAQ</a></li>
+        <li class="tools"><a href="/vim/tools.html">Tools</a></li>
+        <li class="support"><a href="/vim/support.html">Support</a></li>
+        <li class="scripts"><a href="/vim/scripts.html">All Scripts</a></li>
+        <li class="github"><a href="http://github.com/vim-scripts" rel="external">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section >
+    <h2>{{ page.title }}</h2>
+
+    {{ content }}
+  <section>
+
+  {% if page.recent_news %}
+  <section id="recent-news">
+    <h2><a href="vim/news.html">Recent News</a></h2>
+    <ul class="posts big-list hfeed">
+    {% for post in site.categories.news offset: 0 limit: 3 %}
+      <li>
+        <article class="post hentry">
+          <header><h1 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h1></header>
+          <footer><time datetime="{{ post.date | date_to_string }}" class="updated" pubdate>{{ post.date | date_to_string }}</time></footer>
+          <p class="entry-content">{{ post.content | strip_html | truncatewords: 25 }} <a href="{{ post.url }}" class="bookmark" rel="bookmark">more &raquo;</a></p>
+        </article>
+      </li>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  <footer role="contentinfo">
+    <p>Site created with <a href="http://github.com/mojombo/jekyll/wiki" rel="external">Jekyll</a>. Please <a href="http://github.com/vim-scripts/vim-scripts.github.com" rel="external">suggest changes</a> as issues or patches. Site design by <a href="http://www.ccrissman.com" rel="external">Chad Crissman</a>.</p>
+  </footer>
+</body>
 </html>

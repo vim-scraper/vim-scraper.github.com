@@ -1,12 +1,11 @@
 ---
-layout: home
+layout: default
 title: About
 rss: /feeds/news.xml
-no_title: true
+recent_news: true
 rsstitle: vim-scripts news feed
 ---
 
-# {{ page.title }}
 
 This mirror provides access to any of the scripts
 [on vim.org](http://www.vim.org/scripts/) using
@@ -19,8 +18,8 @@ simple approach to
 
 **NOTE: we are in a beta period.**
 We expect that things will be stable from here on out but these repos
-are still too new to be sure.  Enjoy using them and visit the
-[Support tab](/vim/support.html) if you see any problems.
+are still too new to be sure.  Enjoy using them and report
+any problems you see on the [issue tracker](http://github.com/vim-scripts/vim-scraper/issues)!
 
 
 ## Usage
@@ -39,4 +38,5 @@ Still, it can be even easier.  See [Vim Plugin Managers](/vim/tools.html).
 * [scripts feed](http://github.com/vim-scripts.atom)![feed](http://github.com/images/icons/feed.png) or follow the [vim-scripts user](http://github.com/vim-scripts/)
 * [scraper feed](http://github.com/vim-scripts/vim-scraper/commits/master.atom)![feed](http://github.com/images/icons/feed.png) or watch the [vim-scraper](http://github.com/vim-scripts/vim-scraper) project
 * or subscribe to your favorite [scripts](http://github.com/vim-scripts/) feeds 
+
 
