@@ -1,15 +1,12 @@
 ---
 layout: default
 title: FAQ
+comments: true
 ---
 
+## FAQ
 
 ### For Script Users
-**Q:** How do I find a script?
-
-**A:** Goto [all scripts](/vim/scripts.html),
-search for the script by name,
-follow github link to corresponding git repository.
 
 **Q:** Can you fix a bug in one of your scripts?
 
@@ -24,7 +21,7 @@ Why doesn't this plugin just work when I drop it in ~/.vim/bundles?
 
 **A:** It should.  Scripts come in all sorts of weird formats and layouts
 and the scraper corrects them the best it can.  It probably just got confused.
-<a href="http://github.com/vim-scripts/vim-scraper/issues">File an issue</a>
+[File an issue](/vim/support.html)
 and we'll fix the scraper and regenerate the script.
 
 
@@ -44,20 +41,16 @@ is by filing an issue on either the
 <a href="http://github.com/vim-scripts/vim-scraper/issues">scraper</a> or
 <a href="http://github.com/vim-scripts/vim-scripts.github.com/issues">documentation</a>.
 
+**Q:** I sent you a messsage or pull request.  Why don't you respond?
+
+**A:** vim-scripts is just a robot.
+
 
 **Q:** Is the mirror up-to-date?
 
 **A:** The scripts are updated multiple times per day from the
 RSS feed.  The most recent changes can be seen on the
-<a href="http://github.com/vim-scripts">GitHub page</a>,
-and the most recent scrapes can be seen on **TODO TODO**.
-
-
-**Q:** Why are there invisible changes to be committed when I clone a script?
-
-**A:** This appears to be due to a one-time corruption.
-<a href="http://github.com/vim-scripts/vim-scraper/issues">File an issue on the scraper</a>
-and we'll regenerate the problematic repo.
+<a href="http://github.com/vim-scripts">GitHub page</a>.
 
 
 ### For Script Developers
@@ -68,12 +61,6 @@ and we'll regenerate the problematic repo.
 The best thing to do is put your GitHub URL at the top of your script's
 description on vim.org.  This will ensure that it appears at the top
 of your script's README on GitHub.
-
-
-**Q:** Can I send you some fixes for a script?
-
-**A:** We only accept updates from the Vim scripts site.  When the fixes
-appear in a new package on vim.org, they will quickly be mirrored here.
 
 
 **Q:** My commits don't have my GitHub icon next to them.
