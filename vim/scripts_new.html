@@ -3,6 +3,8 @@ layout: default
 title: Scripts
 ---
 
+/<input id="filter" type="text" style="border:none"/>
+
 <table >
   <thead>
     <tr>
@@ -23,19 +25,61 @@ title: Scripts
 
 <script type="text/javascript">
 
+  var Filter = new function() {
+
+    var $ = jQuery;
+    var $this = this;
+
+    this.bind = function(input) {
+      $(input).bind('keyup'  ,function(e) { onkeyup(e, filter); } )
+    };
+
+    var onkeyup = function(e, filter) {
+      // TODO:
+      $this.current = e.target.value
+      setTimeout(function() { filter(e.target.value) }, 10)
+    }
+
+    var filter = function(match) {
+      if (match == null || match == '' || match.lenght == 0) {
+        $('table tbody tr').show()
+      } else {
+
+        $this.matches = [];
+
+        for(var i = 0; i < vim_scripts.length; i++ ) {
+          if ($this.current != match) break;
+          var s = vim_scripts[i];
+          var r = new RegExp(match.toLowerCase())
+          if (s.n && r.test(s.n.toLowerCase())) {
+            $this.matches.push(('tr[id="' + s.n +'"]'))
+          }
+        }
+
+        $('table tbody tr').hide();
+        $($this.matches.join(',')).show();
+      }
+    }
+  };
+
+
+  var vim_scripts = [];
+
   jQuery(function($) {
 
     $.ajax({
       type: "GET",
       url: "/api/scripts_recent.json",
       dataType: "json",
-      success: function(data) { render(0, data) },
+      success: function(data) { vim_scripts = data; render(0, data) },
     });
 
     var render = function(page, data) {
       var html = build_table(page, data);
       if (!html || html == '') {
         $('.loading').remove();
+        Filter.bind(jQuery('#filter'));
+        $('#filter').focus()
         return;
       };
       $('table tbody').append(html)
