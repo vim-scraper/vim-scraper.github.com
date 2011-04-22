@@ -79,6 +79,8 @@ title: Scripts
       if (!html || html == '') {
         $('.loading').remove();
         Filter.bind(jQuery('#filter'));
+        $('#filter').attr('value', window.location.search.replace('?',''))
+        $('#filter').trigger('keyup')
         $('#filter').focus()
         return;
       };
@@ -96,7 +98,7 @@ title: Scripts
         var s = data[ k ]
 
         html += '' +
-        '<tr id="' + s.n + '">' +
+        '<tr style="display:none" id="' + s.n + '">' +
         '<td>'+  s.t + '</td>' +
         '<td class="name">' + '<a href="http://github.com/vim-scripts/' + s.n + '">' + s.n + '</a></td>' +
         '<td>' + s.s + '</td>'
