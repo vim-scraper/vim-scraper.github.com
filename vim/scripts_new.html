@@ -35,14 +35,29 @@ title: Scripts
     };
 
     var onkeyup = function(e, filter) {
-      // TODO:
-      $this.current = e.target.value
-      setTimeout(function() { filter(e.target.value) }, 10)
+      $this.current = e.target.value;
+      if ($this.z) clearTimeout($this.z);
+      $this.z = setTimeout(function() { filter(e.target.value) }, 100)
     }
+
+    var showAll = function(count) {
+      var start = count, BATCH = 1000;
+      var matches = [];
+
+      while (true) {
+        matches.push('tr[id="'+(vim_scripts[count].n) + '"]');
+        count --;
+        if (count < 0) break;
+        if (start - count >= BATCH)  break; 
+      }
+
+      if (matches.length > 0) $(matches.join(',')).show();
+      if(start - count >= BATCH) $this.z = setTimeout(function() { showAll(count); }, 10);
+    };
 
     var filter = function(match) {
       if (match == null || match == '' || match.lenght == 0) {
-        $('table tbody tr').show()
+        showAll(vim_scripts.length - 1);
       } else {
 
         $this.matches = [];
@@ -51,13 +66,12 @@ title: Scripts
           if ($this.current != match) break;
           if ($this.matches.length >= 15) break;
           var s = vim_scripts[i];
-          var r = new RegExp(match.toLowerCase())
-          if (s.n && r.test(s.n.toLowerCase())) {
+          if (s.n && s.n.toLowerCase().indexOf(match.toLowerCase()) >= 0) {
             $this.matches.push(('tr[id="' + s.n +'"]'))
           }
         }
 
-        $('table tbody tr').hide();
+        $('table tbody tr:visible').hide();
         $($this.matches.join(',')).show();
       }
     }
@@ -72,32 +86,24 @@ title: Scripts
       type: "GET",
       url: "/api/scripts_recent.json",
       dataType: "json",
-      success: function(data) { vim_scripts = data; render(0, data) },
+      success: function(data) { loaded(data) },
     });
 
-    var render = function(page, data) {
-      var html = build_table(page, data);
-      if (!html || html == '') {
-        $('.loading').remove();
-        Filter.bind(jQuery('#filter'));
-        $('#filter').attr('value', window.location.search.replace('?',''))
-        $('#filter').trigger('keyup')
-        $('#filter').focus()
-        return;
-      };
-      $('table tbody').append(html)
-      setTimeout(function() { render(page + 1, data) }, 10)
+    var loaded = function(data) {
+      vim_scripts = data; 
+      var html = build_table(data);
+
+      $('table tbody').html(html)
+      Filter.bind(jQuery('#filter'));
+      $('#filter').attr('value', window.location.search.replace('?',''))
+      $('#filter').trigger('keyup')
+      $('#filter').focus()
     }
 
-    var build_table = function(page, data) {
+    var build_table = function(data) {
       var html = '';
-      for(var i = 0; i < 300; i++ ) {
-        var k = data.length - i - 1 - (page * 300)
-
-        if (k < 0) return html;
-
-        var s = data[ k ]
-
+      for(var i = 0; i < data.length; i++ ) {
+        var s = data[ data.length - i - 1 ];
         html += '' +
         '<tr style="display:none" id="' + s.n + '">' +
         '<td>'+  s.t + '</td>' +
