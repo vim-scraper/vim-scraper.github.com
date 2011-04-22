@@ -1,0 +1,64 @@
+---
+layout: default
+title: Scripts
+---
+
+<table >
+  <thead>
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Name</th>
+      <th scope="col" width="100%">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr class="loading">
+      <td colspan="4">loading scripts....</td>
+    </tr>
+
+  </tbody>
+
+</table>
+
+<script type="text/javascript">
+
+  jQuery(function($) {
+
+    $.ajax({
+      type: "GET",
+      url: "/api/scripts_recent.json",
+      dataType: "json",
+      success: function(data) { render(0, data) },
+    });
+
+    var render = function(page, data) {
+      var html = build_table(page, data);
+      if (!html || html == '') {
+        $('.loading').remove();
+        return;
+      };
+      $('table tbody').append(html)
+      setTimeout(function() { render(page + 1, data) }, 100)
+    }
+
+    var build_table = function(page, data) {
+      var html = '';
+      for(var i = 0; i < 100; i++ ) {
+        var k = data.length - i - 1 - (page * 100)
+
+        if (k < 0) return html;
+
+        var s = data[ k ]
+
+        html += '' +
+        '<tr id="' + s.n + '">' +
+        '<td>'+  s.t + '</td>' +
+        '<td class="name">' + '<a href="http://github.com/vim-scripts/' + s.n + '">' + s.n + '</a></td>' +
+        '<td>' + s.s + '</td>'
+        '</tr>'
+      }
+      return html;
+    }
+  }); 
+</script>
