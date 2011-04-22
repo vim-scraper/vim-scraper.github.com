@@ -39,13 +39,13 @@ title: Scripts
         return;
       };
       $('table tbody').append(html)
-      setTimeout(function() { render(page + 1, data) }, 100)
+      setTimeout(function() { render(page + 1, data) }, 10)
     }
 
     var build_table = function(page, data) {
       var html = '';
-      for(var i = 0; i < 100; i++ ) {
-        var k = data.length - i - 1 - (page * 100)
+      for(var i = 0; i < 300; i++ ) {
+        var k = data.length - i - 1 - (page * 300)
 
         if (k < 0) return html;
 
