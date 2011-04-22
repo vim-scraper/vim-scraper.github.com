@@ -49,6 +49,7 @@ title: Scripts
 
         for(var i = 0; i < vim_scripts.length; i++ ) {
           if ($this.current != match) break;
+          if ($this.matches.length >= 15) break;
           var s = vim_scripts[i];
           var r = new RegExp(match.toLowerCase())
           if (s.n && r.test(s.n.toLowerCase())) {
