@@ -5,23 +5,36 @@ title: Scripts
 
 /<input id="filter" type="text" style="border:none"/>
 
-<table >
+<table width="100%">
   <thead>
     <tr>
-      <th scope="col">Type</th>
-      <th scope="col">Name</th>
-      <th scope="col" width="100%">Description</th>
+      <th width="20%">Type</th>
+      <th width="30%">Name</th>
+      <th width="*">Description</th>
     </tr>
   </thead>
-  <tbody>
 
+  <tbody id="all_scripts">
     <tr class="loading">
       <td colspan="4">loading scripts....</td>
     </tr>
+  </tbody>
 
+  <tbody class="none" id="search_results">
   </tbody>
 
 </table>
+
+
+<style type="text/css">
+  html {
+    overflow-y: scroll;
+  }
+  .none {
+    display:none !important;
+  }
+
+</style>
 
 <script type="text/javascript">
 
@@ -36,47 +49,62 @@ title: Scripts
 
     var onkeyup = function(e, filter) {
       $this.current = e.target.value;
+      $this.matches = [];
       if ($this.z) clearTimeout($this.z);
-      $this.z = setTimeout(function() { filter(e.target.value) }, 100)
+      $this.z = setTimeout(function() { filter(e.target.value) }, 10)
     }
-
-    var showAll = function(count) {
-      var start = count, BATCH = 1000;
-      var matches = [];
-
-      while (true) {
-        matches.push('tr[id="'+(vim_scripts[count].n) + '"]');
-        count --;
-        if (count < 0) break;
-        if (start - count >= BATCH)  break; 
-      }
-
-      if (matches.length > 0) $(matches.join(',')).show();
-      if(start - count >= BATCH) $this.z = setTimeout(function() { showAll(count); }, 10);
-    };
 
     var filter = function(match) {
       if (match == null || match == '' || match.lenght == 0) {
-        showAll(vim_scripts.length - 1);
+        $('#all_scripts').removeClass('none')
+        $('#search_results').addClass('none')
       } else {
+        $('#all_scripts').addClass('none')
+        $('#search_results').removeClass('none')
+        $('#search_results').html('')
 
-        $this.matches = [];
+        if ($this.z) clearTimeout($this.z);
+        $this.z = setTimeout(function() { filterer(match, 0); }, 10);
+      }
 
-        for(var i = 0; i < vim_scripts.length; i++ ) {
+      var filterer = function(match, pos) {
+        var count = pos;
+        var m = [];
+        while(true) {
+          if (pos >= vim_scripts.length) break;
           if ($this.current != match) break;
           if ($this.matches.length >= 15) break;
-          var s = vim_scripts[i];
+          var s = vim_scripts[pos];
           if (s.n && s.n.toLowerCase().indexOf(match.toLowerCase()) >= 0) {
-            $this.matches.push(('tr[id="' + s.n +'"]'))
+            $this.matches.push(s);
+            m.push(s);
+          }
+          pos++;
+          if (pos - count >= 200) { 
+            if ($this.z) clearTimeout($this.z);
+            $this.z = setTimeout(function() { filterer(match, pos) }, 10);
+            break;
           }
         }
-
-        $('table tbody tr:visible').hide();
-        $($this.matches.join(',')).show();
+        $('#search_results').append(Table(m.reverse()));
       }
+
     }
   };
 
+  var Table = function(data) {
+    var html = '';
+    for(var i = 0; i < data.length; i++ ) {
+      var s = data[ data.length - i - 1 ];
+      html += '' +
+      '<tr id="' + s.n + '">' +
+      '<td>'+  s.t + '</td>' +
+      '<td class="name">' + '<a href="http://github.com/vim-scripts/' + s.n + '">' + s.n + '</a></td>' +
+      '<td>' + s.s + '</td>'
+      '</tr>'
+    }
+    return html;
+  }
 
   var vim_scripts = [];
 
@@ -86,32 +114,14 @@ title: Scripts
       type: "GET",
       url: "/api/scripts_recent.json",
       dataType: "json",
-      success: function(data) { loaded(data) },
-    });
-
-    var loaded = function(data) {
-      vim_scripts = data; 
-      var html = build_table(data);
-
-      $('table tbody').html(html)
-      Filter.bind(jQuery('#filter'));
-      $('#filter').attr('value', window.location.search.replace('?',''))
-      $('#filter').trigger('keyup')
-      $('#filter').focus()
-    }
-
-    var build_table = function(data) {
-      var html = '';
-      for(var i = 0; i < data.length; i++ ) {
-        var s = data[ data.length - i - 1 ];
-        html += '' +
-        '<tr style="display:none" id="' + s.n + '">' +
-        '<td>'+  s.t + '</td>' +
-        '<td class="name">' + '<a href="http://github.com/vim-scripts/' + s.n + '">' + s.n + '</a></td>' +
-        '<td>' + s.s + '</td>'
-        '</tr>'
+      success: function(data) { 
+        vim_scripts = data; 
+        Filter.bind(jQuery('#filter'));
+        $('#filter').attr('value', window.location.search.replace('?',''))
+        $('#filter').trigger('keyup');
+        $('#filter').focus();
+        setTimeout(function() {$('#all_scripts').html(Table(vim_scripts))}, 10);
       }
-      return html;
-    }
+    });
   }); 
 </script>
