@@ -56,8 +56,5 @@ vim-scripts.org mirror.
    manages plugins using Python.
  * [GetLatestVimScripts](http://www.vim.org/scripts/script.php?script_id=642)
    is a 100% VimL solution.
- * [get\_vim\_scripts](http://blog.amit-agarwal.co.in/2011/03/09/all-in-one-solution-for-all-the-scripts-of-vim-from-vim-org/)
-   A front-end for GetLatestVimScripts.
 
 Also see the [question on StackOverflow](http://stackoverflow.com/questions/2458398/package-management-for-vim).
-

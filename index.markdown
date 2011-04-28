@@ -18,8 +18,8 @@ simple approach to
 
 **NOTE: we are in a beta period.**
 We expect that things will be stable from here on out but these repos
-are still too new to be sure.  Enjoy using them and visit the
-[Support tab](/vim/support.html) if you see any problems.
+are still too new to be sure.  Enjoy using them and report
+any problems you see on the [issue tracker](http://github.com/vim-scripts/vim-scraper/issues)!
 
 
 ### Usage
@@ -40,25 +40,20 @@ Still, it can be even easier.  See [Vim Plugin Managers](/vim/tools.html).
 * or subscribe to your favorite [scripts](http://github.com/vim-scripts/) feeds 
 
 
-<div id="news" class="" >
- <h2><a href="/vim/news.html">Recent News</a></h2>
- {% for post in site.categories.news offset: 0 limit: 3 %}
-<div class="post">
-  <div class="header">
-    <h4 class="title">
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </h4>
-    <span class="date">{{ post.date | date_to_string }}</span>
- </div>
+<div id="recent-news">
+  <h2><a href="vim/news.html">Recent News</a></h2>
+  <ul class="posts big-list hfeed">
+  {% for post in site.categories.news offset: 0 limit: 3 %}
+    <li>
+      <article class="post hentry">
+        <header><h1 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h1></header>
+        <footer><time datetime="{{ post.date | date_to_string }}" class="updated" pubdate>{{ post.date | date_to_string }}</time></footer>
+        <p class="entry-content">{{ post.content | strip_html | truncatewords: 25 }} <a href="{{ post.url }}" class="bookmark" rel="bookmark">more &raquo;</a></p>
+      </article>
+    </li>
+  {% endfor %}
+</div>
 
- <div class="content">
-  {{ post.content | strip_html | truncatewords: 25 }}
-  <a href="{{ post.url }}">→more</a>
- </div>
- <p><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">comments</a></p>
-</div>
- {% endfor %}
-</div>
 
 <script type="text/javascript">
   var disqus_shortname = 'vimscripts';

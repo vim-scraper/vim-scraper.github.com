@@ -12,8 +12,8 @@ comments: true
 
 **A:** Unfortunately there's nothing the vim-scripts mirror can
 do about this.  You'll need to notify the script's author.  When
-a fixed version of the plugin is released the scraper will
-automatically mirror it.
+a fixed version of the plugin is released, vim-scripts will
+happily mirror it.
 
 
 **Q:** Why are all the files in the wrong places?
@@ -24,6 +24,22 @@ and the scraper corrects them the best it can.  It probably just got confused.
 [File an issue](/vim/support.html)
 and we'll fix the scraper and regenerate the script.
 
+
+**Q:** Why can't I file an issue on a script?
+
+**A:** The issues and wikis are turned off for all scripts because
+there's little chance the original authors would ever see them.
+Still, it might make sense to be able to file issues anyway.
+This is easy enough to change, we just haven't made a final decision yet.
+Discuss it [here](http://github.com/vim-scripts/vim-scraper/issues/issue/2).
+
+
+**Q:** I sent you a GitHub messsage.  Why don't you respond?
+
+vim-scripts is just a robot.  The best way to discuss things
+is by filing an issue on either the
+<a href="http://github.com/vim-scripts/vim-scraper/issues">scraper</a> or
+<a href="http://github.com/vim-scripts/vim-scripts.github.com/issues">documentation</a>.
 
 **Q:** I sent you a messsage or pull request.  Why don't you respond?
 

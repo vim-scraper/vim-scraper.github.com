@@ -1,81 +1,96 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title>Vim Scripts: {{ page.title }}</title>
-    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
-    <link rel="stylesheet" type="text/css" href="/css/screen.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/fluid960.css"/>
-    {% if page.rss %}
-      <link href="{{ page.rss }}" rel="alternate" title="{{ page.rsstitle }}" type="application/atom+xml" />
-    {% endif %}
-    <link type="text/css" href="/css/smoothness/jquery-ui-1.8.11.custom.css" rel="stylesheet" />	
-    <script type="text/javascript" src="/js/jquery-1.5.1.min.js"></script>
-    <script type="text/javascript" src="/js/jquery-ui-1.8.11.custom.min.js"></script>
-    <script>
-      $(function() {
-        $("#scripts").autocomplete({
-          minLength: 2,
-          select: function(ev,ui) { $(window.location).attr('href', "http://github.com/vim-scripts/" + ui.item.value); }
-        });
-        // load the script names after the user focuses the search box
-        $("#scripts").bind("focus.scripts", function(ev,ui) {
-          scripts = $(this);
-          scripts.unbind("focus.scripts"); // don't hammer the server
-          $.getJSON('/api/scripts.json', function(data) {
-            scripts.autocomplete("option", "source", data);
-            // if the ajax call fails, should we re-bind the focus listener to try again?
-          });
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr" class="no-js">
+<!-- the "no-js" class is for Modernizr. -->
+
+<head>
+
+	<meta charset="utf-8" />
+
+	<title>Vim Scripts</title>
+
+	<meta name="description" content="This mirror provides access to any of the scripts on vim.org using Git. It was inspired by Pathogen's simple approach to Vim plugins." />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  {% if page.rss %}
+    <link href="{{ page.rss }}" rel="alternate" title="{{ page.rsstitle }}" type="application/atom+xml" />
+  {% endif %}
+
+  <!--[if ! lte IE 6]><!-->
+  	<link rel="stylesheet" href="/css/core.css" />
+  <!--<![endif]-->
+
+	<!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css">
+  <![endif]-->
+
+	<script src="/js/modernizr-1.6.min.js"></script>
+
+  <link type="text/css" href="/css/smoothness/jquery-ui-1.8.11.custom.css" rel="stylesheet" />	
+  <script type="text/javascript" src="/js/jquery-1.5.1.min.js"></script>
+  <script type="text/javascript" src="/js/jquery-ui-1.8.11.custom.min.js"></script>
+  <script>
+    $(function() {
+      $("#scripts").autocomplete({
+        minLength: 2,
+        select: function(ev,ui) { $(window.location).attr('href', "http://github.com/vim-scripts/" + ui.item.value); }
+      });
+      // load the script names after the user focuses the search box
+      $("#scripts").bind("focus.scripts", function(ev,ui) {
+        scripts = $(this);
+        scripts.unbind("focus.scripts"); // don't hammer the server
+        $.getJSON('/api/scripts.json', function(data) {
+          scripts.autocomplete("option", "source", data);
+          // if the ajax call fails, should we re-bind the focus listener to try again?
         });
       });
-    </script>
-  </head>
+    });
+  </script>
 
-  <body id='{{ page.title | strip_html | downcase | replace(' ', '_') }}'>
-    <div id='header' class="container_12">
-      <!-- disable type-in completion for now
-        <input type="text" name="scripts" id="scripts" /> -->
-      <div class="">
-        <h2 > <a href='/index.html'><span>Vim</span>-Scripts.org</a>
-        </h2>
-      </div>
-    </div>
-    <div class="container_12">
-      <div id='menu' class="">
-        <ol class='toc'>
-          <li><a href='/index.html'>About</a></li>
-          <li><a href='/vim/news.html'>News</a></li>
-          <li><a href='/vim/faq.html'>FAQ</a></li>
-          <li><a href='/vim/tools.html'>Tools</a></li>
-          <li><a href='/vim/support.html'>Support</a></li>
-          <li class="allscripts"><a href='/vim/scripts.html' >Scripts</a></li>
-          <li><a href='http://github.com/vim-scripts'>GitHub</a></li>
-        </ol>
-      </div>
-    </div>
-    <div id="content" class="container_12">
-      <div class="">
-        {{ content }}
-      </div>
-    </div>
-    <div class="container_12">
-      <div id='comments' class="">
-        <p>&nbsp;</p>
-        {% if page.comments %}
-          <div id="disqus_thread"></div>
-          <script type="text/javascript">
-            var disqus_shortname = 'vimscripts';
-            var disqus_identifier = '{{ page.url }}';
-            var disqus_url = 'http://vim-scripts.org{{ page.url }}';
-            var disqus_title = '{{ page.title | escape | replace: "'", "\\'" }}';
-            (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        {% endif %}
-      </div>
-    </div>
-  </body>
+</head>
+
+<body id='{{ page.title | strip_html | downcase | replace(' ', '_') }}'>
+  <header role="banner">
+    <h1><a href="/index.html" rel="home">Vim Scripts</a></h1>
+    <nav role="navigation">
+      <ul>
+        <li class="about"><a href="/index.html" rel="home">About</a></li>
+        <li class="news"><a href="/vim/news.html" rel="news">News</a></li>
+        <li class="faq"><a href="/vim/faq.html">FAQ</a></li>
+        <li class="tools"><a href="/vim/tools.html">Tools</a></li>
+        <li class="support"><a href="/vim/support.html">Support</a></li>
+        <li class="scripts"><a href="/vim/scripts.html">All Scripts</a></li>
+        <li class="github"><a href="http://github.com/vim-scripts" rel="external">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section >
+    {{ content }}
+  <section>
+
+  <section id='comments'>
+    <p>&nbsp;</p>
+    {% if page.comments %}
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = 'vimscripts';
+        var disqus_identifier = '{{ page.url }}';
+        var disqus_url = 'http://vim-scripts.org{{ page.url }}';
+        var disqus_title = '{{ page.title | escape | replace: "'", "\\'" }}';
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    {% endif %}
+  </section>
+
+  <footer role="contentinfo">
+    <p>Site created with <a href="http://github.com/mojombo/jekyll/wiki" rel="external">Jekyll</a>. Design by <a href="http://www.ccrissman.com" rel="external">Chad Crissman</a>.</p>
+  </footer>
+</body>
 </html>
