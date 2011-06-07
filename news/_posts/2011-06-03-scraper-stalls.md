@@ -27,42 +27,46 @@ Surely a coauthor of the
 gem knows how to rescue from exceptions!
 Let the scraper keep churning, ignore the broken script,
 and it would take months for anyone to notice or care that anything is wrong.
-That should be more reliable, right?
 
-Here's the catch: fixing scraper issues can be somewhat tedious.
+Here's the catch: fixing scraper issues can get pretty tedious.
 It's not easy to find time to debug code, especially when most of the
-time some sleazy script author stuck a .zip extension
-on a .gif file.  Not very rewarding.
+time it turns out to be nothing more than a .zip extension
+on an uncompressed .gif.
 
-Programmers tend to have tons of cool things to work on.
-You gotta yell pretty loud if you want to attract their attention.
+Programmers have lots of cool things to work on.
+You need to yell pretty loud if you want to attract their attention.
 
-Let's say the scraper just kept on cruising.
-Every week or two another script author would find a new way of breaking things.
-After a few weeks there would besome scripts, but vim-scripts users
-would still be happy and there would be little incentive to fix things.
-In a few months, by the time anyone has anything to complain about,
-whole ghettos of stalled scripts would run through the project, and it would
-take an immense effort to get things back on track.
+So, for the sake of argument, let's say the scraper just kept on cruising.
+Every week or two another script author finds a new way of breaking things
+and a few more scripts fail.  Unless it's a high profile script like rails.vim,
+no maintainer shows up to mend the problems.  After some difficult years, the scraper
+finds that it can
+only scrape [taglist.vim](http://www.vim.org/scripts/script.php?script_id=273).
+No maintainer is willing to devote the man month of time to repair the hundreds
+of small problems everywhere.
+Suddenly finding itself friendless and jobless, unforked and unloved,
+the scraper sits forever idle on GitHub.
 
-The scraper needs to make sure its problems are
-big enough to get fixed and yet small enough to still be fixable.
-That's why it yells loudly and early.
-The problem should still be small, the fix quick, and the entire project
+##### The Upshot
+
+The scraper walks a fine line: it needs to ensure its problems are
+big enough to get fixed and yet small enough to be fixable.
+That's why it yells loud and early.
+Hopefully the problem is small, the fix quick, and the entire project
 will be back on track in a day or two.
 
-Ensuring the most reliable behavior in the small picture
-sometimes becomes destabilizing in the big picture.
+Forcing the most reliable behavior in the small picture can
+sometimes be destabilizing in the big picture.
 NetFlix's [Chaos Monkey](http://techblog.netflix.com/2010/12/5-lessons-weve-learned-using-aws.html)
-is another example of this.
+is another example.  It might be counterintuitive but it certainly seems to work.
 
 And that's why scraper stalls are a normal part of life.
 They happen occasionally, get crushed like a minor irritation,
-and things are back to normal.  Mostly stable.
+and things go back to normal.
 
 If you notice a stall, first smile because it's an indication that
-things in Vim land are thriving.  Then, if nothing appears to be
-happening, help the scraper yell for help.
+script authors are innovating.  Vim is still thriving.
+Then, if nothing appears to be happening, help the scraper yell for help.
 
 
 ### Postscript
@@ -72,17 +76,18 @@ messy business that continually breaks at random and inopportune times.
 Add to that the complete free-for-all that is vim.org/scripts
 (rename your script at any time, invent your own way of deleting your scripts,
 no standard archive or plugin format, etc) and, in theory, you have an inky soup that just won't
-convert into Pathogenable git repositories.  Last August I was starting to worry
-that every morning I would wake up and immediately fix all the
-scrape problems created on the previous day.
+convert into Pathogened git repositories.  Last August I was starting to worry
+that every morning I would wake up and immediately need to fix all the
+scrape problems created uring the previous day.
 
 Happily, script authors tend to make the same mistakes and find the same solutions as one other.
-If I find a workaround for one script, ten unrelated scripts will probably be fixed too (five
+If I find a workaround for one script, ten unrelated scripts might be also be fixed (five
 of which haven't even been written yet).
-It was rocky going at first, but once the scraper reached a certain maturity,
-it was finally able to wade through the soup and do a reasonable job all on its own.
 
-Of course, it will never be complete, and there will always be stalls.
-But, when I go on a two week vacation, I'm surprised if the scraper is
+It was rocky going at first, but once the scraper reached a certain maturity,
+it proved that it could wade through the soup almost completely on its own.
+
+Of course, the scraper will never be complete, and there will always be stalls.
+But, when I go on a two week vacation, I'll be surprised if things are
 stalled when I get back.  And that's good enough!
 
