@@ -90,9 +90,9 @@ jQuery(function($) {
       vim_scripts = data; 
       Filter.bind(jQuery('#filter'));
       $('#filter').attr('value', window.location.search.replace('?',''))
-    $('#filter').trigger('keyup');
-  $('#filter').focus();
-  setTimeout(function() {$('#all_scripts').html(Table(vim_scripts))}, 10);
+      $('#filter').trigger('keyup');
+      $('#filter').focus();
+      setTimeout(function() {$('#all_scripts').html(Table(vim_scripts))}, 10);
     }
   });
-}); 
+});
