@@ -39,7 +39,6 @@ title: Scripts
 <script type="text/javascript">
 
   var Filter = new function() {
-
     var $ = jQuery;
     var $this = this;
 
@@ -48,6 +47,20 @@ title: Scripts
     };
 
     var onkeyup = function(e, filter) {
+      switch(e.keyCode) {
+        case 37: //Event.KEY_LEFT:
+        case 38: //Event.KEY_UP:
+        case 39: //Event.KEY_RIGHT:
+        case 40: //Event.KEY_DOWN:
+        case 9:  //Event.KEY_TAB:
+        case 91: //meta
+        case 16: //shift
+        case 17: //ctrl
+        case 18: //alt
+        case 19: //ctrl
+        if (e.charCode == 0) { return; }
+      }
+ 
       $this.current = e.target.value;
       $this.matches = [];
       if ($this.z) clearTimeout($this.z);
