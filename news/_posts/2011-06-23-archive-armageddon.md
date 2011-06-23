@@ -6,37 +6,41 @@ category: news
 
 This is a quick description of two scraper stalls that happened in May.
 
-Earlier we [talked about Scraper Stalls](/news/2011/06/03/scraper-stalls.html)
+Earlier we [discussed scraper stalls](/news/2011/06/03/scraper-stalls.html)
 and how they prevent bugs from slipping through the cracks.
 This post talks about two specific stalls from mid-March.
-If it seems like old news, that's because it's been sitting
-half-written since June 3, ignored as all sorts of wonderful
-new ways to stall the scraper have been discovered since then.
+If it seems like old news, that's because this post has been sitting
+half-written since June 3, silently ignored as all sorts of weird
+and wonderful new ways to stall the scraper have been discovered.
 
 
-### Sensing Files
+## Sensing Files
 
-A script author uploads a text file or an archive to vim.org, then the
-scraper downloads it and stuffs it into a git repository.  Easy!
+A script author uploads a text file or an archive to vim.org, the
+scraper downloads it and stuffs it into a git repository, and
+Bob's your uncle.  No problem!
 
-The trick is, mistakes run wild on vim.org so the scraper needs to try
-to clean things up.  And that turns into guesswork.
+The trick is, mistakes run wild on vim.org.  The scraper needs to try
+to clean things up.  And that quickly turns into guesswork.
 
-The most common mistake is probably files with the wrong extension.
+The most common mistake script authors make is putting the wrong
+extensions on the files they upload.
 A .tgz is not actually gzipped, a .bz2 is actually gzipped, and so on.
 
 We can sniff the file's
-[magic](http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html#id2820544) to discover what it REALLY is
+[magic](http://standards.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-latest.html#id2820544)
+to discover what it *really* is
 but that's
 [often](https://github.com/minad/mimemagic/issues/1)
 [wrong](https://github.com/minad/mimemagic/issues/4) too!
 Besides, Java jarfiles sniff as zipfiles, some archive formats
-end up looking like the files they contain, and so on.
-It turns out we can't rely on file magic either.
+sniff as the files they contain, and so on.
+While it's more reliable than the file's extension, it turns out
+we can't rely on file magic either.
 
 The solution to this problem has produced the most complex part of the scraper:
-[the sense_file routine](https://github.com/vim-scraper/vim-scraper/blob/1805e760f0d28d0a299e21e11c1950b90149f8c1/scraper#L1033)
-that tries to reconcile each file's extension and magic to determine
+[the sense_file routine](https://github.com/vim-scraper/vim-scraper/blob/1805e760f0d28d0a299e21e11c1950b90149f8c1/scraper#L1033).
+It tries to reconcile the file's extension and magic to determine
 the best way to handle it.
 Grown through tedious trial and error, sense_file has become big and ugly
 but, implausibly, it almost always works.
@@ -45,19 +49,19 @@ but, implausibly, it almost always works.
 ### The Case of the Misleading Extension
 
 In mid-May, a script author uploaded a .tgz file that was only tar encoded.
-The scraper didn't anticipate this, wasn't confident that it could trust
-either claim, so it bailed out.
+The scraper didn't anticipate this, couldn't figure out which claim to trust,
+so it bailed out.
 
 I'm surprised it took this long for this particular mistake to show up!
 I would have bet money that someone would have done it before 2005.
 
 This was
 [easy to solve](https://github.com/vim-scraper/vim-scraper/commit/203b1c40164eb62d9e6bb278fc9f864a25f6bd3e)
-once it was clear what was going on.  Result: a 2 day stall and
-a 15 minute fix.
+once it was clear what was going on.
+Result: a 15 minute fix and a 2 day stall.
 
 
-### Archive Formats
+## Archive Formats
 
 Most of the complexity may be in the sense_file routine (above),
 but most of the time spent coding the scraper has gone into
@@ -111,34 +115,40 @@ the first zipfile that Infozip can't handle:
     skipping: readme.markdown         need PK compat. v6.3 (can do v4.6)
     skipping: syntax/chklst.vim       need PK compat. v6.3 (can do v4.6)
 
-Given Infozip's slow rate of development, 
+Back in 2006, pkware
+[updated the zipfile specification](http://www.pkware.com/documents/casestudies/APPNOTE.TXT)
+and Infozip still can't handle it.
+And, given its slow rate of development,
 6.3 compatibility is probably years away.
-Time to find another unzipper.
+Time to find another unzipper!
 
 It turns out [Igor Pavlov's 7-zip](http://www.7-zip.org/)
 utility can uncompress zipfiles, handles the new format,
-and the scraper is using it to uncompress .7z files anyway!
-It's just a small tweak to use it for every zipfile.
+and the scraper is already using it to uncompress .7z files anyway!
+With just a small tweak we can use 7z for all zipfiles.
 
 Unfortunatley, 7z can't reliably unzip DOS archives that
 use '\' as a path separator.
-There are 7 zipfiles in the archives that 7z can't uncompress.
+There are currently seven zipfiles in the archives that 7z can't uncompress.
 This looks easy to fix so I've filed a
 [feature request](https://sourceforge.net/tracker/index.php?func=detail&aid=3310980&group_id=14481&atid=114481#).
 
+But, once again, that leaves us with a compromise to make.
 For now, the scraper will continue to use Infozip to unzip
-regular zipfiles.  It must
+regular zipfiles and
 [special case](https://github.com/vim-scraper/vim-scraper/commit/cee66a5052bf52a2c111af1e02a57aaf0c13085a)
 any new zipfiles that Infozip can't handle.  (If a v6.3 zipfile
-that uses '\' as a path separator shows up then we're sunk).
+that uses '\' as a path separator shows up then we're hosed).
 
-Once the newer zip format becomes more widely used, we can switch to
-using 7z by default and then special-case the files that require Infozip.
+When the newer zip format becomes more widely used and the special-case
+list is getting too long, we can switch to
+using 7z by default and then hard-code the seven files that require Infozip.
+Another approach would be to sniff the zipfile to see what path separator
+it's using and then use that to determine which unzipper to use.
 
-With a little time and luck, hopefully the 7-zip feature request will receive some love,
-7z will properly handle '\' as a path separator, and there will be no need
+With a little time and luck, hopefully the feature request will receive some
+love, 7z will properly handle all zipfiles, and there will be no need
 to special-case anything anymore.
 
-And that's how a simple scraper stall can turn into a multi-day
-research project.
+And that's how a small scraper stall can turn into a big research project!
 
