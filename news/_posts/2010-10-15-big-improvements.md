@@ -5,15 +5,15 @@ category: news
 ---
 
 Major changes are afoot: we've deleted and re-created every repository
-on vim-scripts.  The biggest reason we did this was to conver the
-email addresses in the commits messages into something that GitHub
+on vim-scripts.  The biggest reason we did this was to convert the
+email addresses in the commit messages into something that GitHub
 can link automatically.  This was
-also a good opportunity to fix long and multi-line commit messages and
+also an opportunity to fix long and multi-line commit messages and
 suppress a bunch of .swp files that authors uploaded accidentally.
 
 As a side-effect of the ground-up rebuild, various problems in the
 following scripts have been repaired.
-If they gave you trouble before, it's worth trying again.
+If they gave you trouble before, they're worth trying again.
 
  - 0065 - CD.vim
  - 0356 - dbext.vim
@@ -35,7 +35,7 @@ It's minor, but it's nice that the dates on these scripts were fixed:
 Finally, in the past two months the authors of the following scripts
 deleted some or all of their histories.  The missing revisions
 were restored from the previous vim-scripts mirror.  This explains why
-a few commits here and there might still have the old (broken) email
+a few commits might still have the old (broken) email
 addresses.  No big deal.
 
  - 2791 - popup\_it--su
