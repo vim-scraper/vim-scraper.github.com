@@ -7,7 +7,10 @@ category: news
 Github has started refusing pushes that contain three-digit time zones.
 This might require every vim-scripts repository to be regenerated.
 And that would require everyone in the world to delete and re-clone all their vim-scripts repositories!
-Truly, we live in interesting times.
+We live in interesting times.
+
+The good news is that the scraper is back online so, for now, things
+should appear normal.
 
 
 ## The Story
