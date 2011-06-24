@@ -4,42 +4,47 @@ title: Picky About Timezones
 category: news
 ---
 
-Github has started refusing pushes that contain three-digit time zones.
-This might require every vim-scripts repository to be regenerated.
-And that would require everyone in the world to delete and re-clone all their vim-scripts repositories!
+Github has started refusing pushes from repositories created by the vim-scripts
+scraper.  Due to one wayward digit in every commit on this
+site, there's the chance that everyone will have to delete and re-clone
+every repository they've ever downloaded.
+
 We live in interesting times.
 
-The good news is that the scraper is back online so, for now, things
-should appear normal.
+The good news is that the scraper is back online and caught up so for now things
+should be fairly normal.  For now.
 
 
 ## The Story
 
 Up until last week, GitHub was happy to accept commits with a time zone of -700.
 Now, presumably due to a Git upgrade, they only accept pushes with
-four digits time zones: -0700.
+four digits time zones: -0700.  Everything else is refused.
 
-Unfortunately, up until today, every vim-scripts commit has been generated
+Unfortunately, every vim-scripts commit has been generated
 with a time zone of -700.
 
 How did this happen?
 
-Way back in the beginning of time, the scraper shelled out to the git
-executable for everything.  It was endless calls of `system("git tag -a -m ...")`
-and hoping that everything went OK.  It was slow, ugly, unreliable, confusing,
-and *slow*?  It didn't take long to realize that this was never going to work.
+Way back in the beginning of time, the scraper would shell out to the git
+executable any time it needed to manipulate a repository.
+Picture a sea of calls like `system("git tag -a -m ...")`,
+then hoping that everything went OK.  It was slow, ugly, unreliable, confusing,
+and *slow*.  It didn't take long to realize that this just wasn't going to work.
 
 Then I tried switching to [Grit](https://github.com/mojombo/grit).
 This made things prettier because I could use Grit objects instead
 of passing text strings everywhere, the errors became more understandable,
-and there were a few more small benefits.  However, there were some
-drawbacks too: it had serious confusion about the current directory,
-and it still shelled out for everything.  It was pretty
+and there were a few other small benefits.  However, there were some serious
+drawbacks too: it was continually changing the current directory, confusing
+itself, and it still shelled out for everything.  It was pretty
 clear that Grit was written with GitHub's needs in mind and, if I wanted
-to use it in the scraper, I would have to do some serious work.
+to use it in the scraper, I would have to commit to some serious work.
 
-That looked like a death blow.  Writing a fast, tight Git layer before
-even starting the scraper would have taken too much time.
+Writing Git bindings before even starting to work on the scraper would have
+taken too much time.
+Nowadays [libgit2](http://libgit2.github.com/) could have solved this
+but, at the time, this looked like a death blow.
 
 
 ### Enter Gitrb
@@ -51,17 +56,17 @@ back on track.  In this case it was Daniel Mendler's
 [gitrb](https://github.com/minad/gitrb) gem.
 
 Gitrb is a real, object-based API in 100% Ruby that directly manipulates the
-on-disk Git repository.  It's fast, it's easy to use, and even
+on-disk Git repository.  It's fast, it's easy to use, it's even
 kind of fun.  The few
-issues that I found were easy to solve and Daniel was very receptive to
+issues that I found were easy to solve and Daniel was very responsive with
 modifications.  The scraper was rolling again.
 
-One of the issues that I ran into was that Gitrb thought my time zone
-was --700, producing commits that the git executable would not accept.
-Easy to understand since Daniel lives in to the east of the Meridian.
+One of the issues that I ran into was that Gitrb produced invalid time zones in the
+western hemisphere: --700.   The git executable would not accept these commits.
+It's easy to understand, Daniel lives in to the east of the Meridian.
 No problem, a
 [quick patch,](https://github.com/minad/gitrb/commit/c409985f0fe88993a76a0f3b46528b9cc9bf4eda)
-the time zone is -700, and git is happy with our commits again.
+the time zone is -700, and git is happy with every commit.
 
 
 ### The Bug Comes Home
@@ -74,24 +79,25 @@ the problem because
 git log --pretty=fuller shows the correct -0700 time zone.  It's only when you
 use git log --pretty=raw that the horrifying truth becomes apparent.
 
-> The commit date in very commit in every vim-scripts repository is invalid.
+> The commit date in every commit in every vim-scripts repository is invalid.
 
 Git didn't use to care.
 The check was
 [added in April 2010,](https://github.com/git/git/commit/daae19224a05be9efb9a39c2a2c1c9a60fe906f1)
-a month before I submitted the Gitrb time zone fix.
+a month before I wrote the Gitrb time zone fix.
 If only I had tested it against git HEAD...
 
-Writing the proper gitrb fix
+Fixing gitrb
 [was easy.](https://github.com/minad/gitrb/pull/11)
 Fixing all the broken repos, now that's going to be a challenge.
 
 
 ### What Does it Mean?
 
-Well, nothing needs to change immediately.  Thanks to Bundler, the scraper has started
+Well, nothing needs to change immediately.  Thanks to Bundler, the scraper started
 [using the fixed gitrb](https://github.com/vim-scraper/vim-scraper/commit/26aa456419ec10276887b4565c8e70fd93499bab)
-right away.  GitHub is accepting the fixed commits and we should be caught up in a day.
+right away.  GitHub is accepting the fixed commits and we should be caught up in a day
+(NOTE: 4 hours later, we're caught up).
 
 There's still a minor problem when a script author renames a repository.  When the scraper
 sees a rename, it first pushes a commit describing the rename
@@ -113,7 +119,7 @@ clone them again.  That should be fairly painless if you're using
 [Vundle](https://github.com/gmarik/vundle)
 or
 [vim-update-bundles](https://github.com/bronson/vim-update-bundles/).  For people
-maintaining their plugins by hand, though, this might ben an unpleasant surprise.
+maintaining their plugins by hand, though, this might be an unpleasant surprise.
 
 Luckily, we don't have to do anything immediately.  We can take a few weeks and
 make sure to implement the proper fix, whatever it turns out to be.
