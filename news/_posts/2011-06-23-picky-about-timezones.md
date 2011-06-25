@@ -18,7 +18,7 @@ other than that, things should be back to normal.
 
 Up until last week, GitHub was happy to accept commits with a time zone of -700.
 Now, presumably due to a Git upgrade, they only accept pushes with
-four digits time zones: -0700.  The others are refused.
+four digit time zones: -0700.  The others are refused.
 
 Unfortunately, every vim-scripts commit has been generated
 with a time zone of -700.
