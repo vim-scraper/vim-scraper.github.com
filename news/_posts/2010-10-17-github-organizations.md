@@ -45,7 +45,7 @@ what's happening on vim-scripts?
 This organization was barely 10 minutes old and already it was starting to smell bad.
 
 After a few more hours I managed to work around all of the problems except
-[one showstopper](http://github.com/develop/develop.github.com/commit/4ec1902ca7573aeacdf29866556fcf0ac827b290#comments).
+[one showstopper](http://github.com/github/develop.github.com/commit/4ec1902ca7573aeacdf29866556fcf0ac827b290#comments).
 Oh well!  There's no way to convert an organization back into a user
 so it was time to delete vim-scripts and start from scratch.
 
