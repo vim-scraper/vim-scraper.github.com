@@ -2,6 +2,7 @@
 layout: news
 title: Planned Outage Sunday Night
 category: news
+author: bronson
 ---
 
 vim-scripts.org will be down for 1/2 hour on Sunday night Pacific time.

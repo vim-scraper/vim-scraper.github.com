@@ -2,6 +2,7 @@
 layout: news
 title: We're in Beta!
 category: news
+author: bronson
 ---
 
 Just a quick note: that the big red warning sign has been taken down.

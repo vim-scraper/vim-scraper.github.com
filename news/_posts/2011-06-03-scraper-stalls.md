@@ -2,6 +2,7 @@
 layout: news
 title: Scraper Stalls
 category: news
+author: bronson
 ---
 
 Observant vim-scripts users

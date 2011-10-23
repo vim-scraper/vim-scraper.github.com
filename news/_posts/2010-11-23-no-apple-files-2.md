@@ -2,6 +2,7 @@
 layout: news
 title: No Apple Files Part 2
 category: news
+author: bronson
 ---
 
 The [previous attempt](/news/2010/11/15/no-apple-files.html)

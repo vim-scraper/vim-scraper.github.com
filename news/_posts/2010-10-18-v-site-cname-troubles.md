@@ -2,6 +2,7 @@
 layout: news
 title: Site CNAME Troubles
 category: news
+author: bronson
 ---
 
 **UPDATE:** GitHub has resolved the problem.  [http://vim-scripts.org](http://vim-scripts.org/)

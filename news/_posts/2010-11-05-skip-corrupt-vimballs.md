@@ -2,6 +2,7 @@
 layout: news
 title: Skipping Corrupt Vimballs
 category: news
+author: bronson
 ---
 
 It's not easy to tell when a vimball is corrupt or didn't extract

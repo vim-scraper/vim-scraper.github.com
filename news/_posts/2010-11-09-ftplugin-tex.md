@@ -2,6 +2,7 @@
 layout: news
 title: TeX Script Location
 category: news
+author: bronson
 ---
 
 Thanks to [DataWraith](https://github.com/DataWraith)

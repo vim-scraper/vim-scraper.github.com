@@ -2,6 +2,7 @@
 layout: news
 title: Fixed Keymap Plugins
 category: news
+author: bronson
 ---
 
 The scraper didn't recognize keymap plugins.

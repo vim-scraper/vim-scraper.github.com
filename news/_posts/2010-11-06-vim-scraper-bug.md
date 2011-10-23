@@ -2,6 +2,7 @@
 layout: news
 title: Fixed a Scraper Bug
 category: news
+author: bronson
 ---
 
 The scraper

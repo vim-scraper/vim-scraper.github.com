@@ -2,6 +2,7 @@
 layout: news
 title: Fixed Newlines and Script Types
 category: news
+author: bronson
 ---
 
 37 repositories have been fixed and regenerated.

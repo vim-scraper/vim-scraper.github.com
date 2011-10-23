@@ -2,6 +2,7 @@
 layout: news
 title: Upload Finished
 category: news
+author: bronson
 ---
 
 All repositories are up except for two.  The mirror should

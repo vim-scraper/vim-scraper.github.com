@@ -2,6 +2,7 @@
 layout: news
 title: Unfuddling Email Addresses
 category: news
+author: bronson
 ---
 
 Some time around February 15, vim.org modified the way it presents

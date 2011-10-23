@@ -2,6 +2,7 @@
 layout: news
 title: Trimming Archive Hierarchy
 category: news
+author: bronson
 ---
 
 A small refactoring allows the scraper to be a lot smarter about cleaning

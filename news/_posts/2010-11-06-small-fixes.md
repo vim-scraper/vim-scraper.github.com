@@ -2,6 +2,7 @@
 layout: news
 title: Small Fixes for options.vim and Emacs Swap Files
 category: news
+author: bronson
 ---
 
 Some scripts include a file whose name ends in \_options.vim that

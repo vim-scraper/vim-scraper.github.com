@@ -2,6 +2,7 @@
 layout: news
 title: Major Changes
 category: news
+author: bronson
 ---
 
 Major changes are afoot: we've deleted and re-created every repository

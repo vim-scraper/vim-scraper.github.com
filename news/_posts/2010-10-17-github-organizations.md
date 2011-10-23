@@ -2,6 +2,7 @@
 layout: news
 title: GitHub Organization Conversion Mistake
 category: news
+author: bronson
 ---
 
 A quick note on why I converted vim-scripts to a GitHub organization,

@@ -2,6 +2,7 @@
 layout: news
 title: Upload Continuing
 category: news
+author: bronson
 ---
 
 The first 1000 scripts have been uploaded.  Things are moving at about

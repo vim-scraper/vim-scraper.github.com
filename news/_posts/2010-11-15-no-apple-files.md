@@ -2,6 +2,7 @@
 layout: news
 title: Suppress Apple DS_Store Files
 category: news
+author: bronson
 ---
 
 Apple software creates

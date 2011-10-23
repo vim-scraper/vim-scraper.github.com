@@ -2,6 +2,7 @@
 layout: news
 title: Fixing Duplicate Version IDs
 category: news
+author: bronson
 ---
 
 The scripts on vim.org are full of releases with the same version number

@@ -2,6 +2,7 @@
 layout: news
 title: Suppressing VCS Directories
 category: news
+author: bronson
 ---
 
 The scraper now suppresses common VCS dirs (.git, .hg, .bzr, and .svn).

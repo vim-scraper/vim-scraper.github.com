@@ -2,6 +2,7 @@
 layout: news
 title: Scraper Code Moved
 category: news
+author: bronson
 ---
 
 The scraper and its associated script and data files change

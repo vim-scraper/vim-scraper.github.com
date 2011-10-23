@@ -2,6 +2,7 @@
 layout: news
 title: Picky About Timezones
 category: news
+author: bronson
 ---
 
 Github has started refusing commits created by the scraper.

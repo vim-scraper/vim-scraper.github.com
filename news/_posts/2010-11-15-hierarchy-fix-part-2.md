@@ -2,6 +2,7 @@
 layout: news
 title: Trimming Archive Hierarchy Revisited
 category: news
+author: bronson
 ---
 
 Thanks to an

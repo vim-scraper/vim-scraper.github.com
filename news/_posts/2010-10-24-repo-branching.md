@@ -2,6 +2,7 @@
 layout: news
 title: Branches in Some Plugins
 category: news
+author: bronson
 ---
 
 Script 790, [python.vim--Vasiliev](http://github.com/vim-scripts/python.vim--Vasiliev)

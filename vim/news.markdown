@@ -7,17 +7,20 @@ rsstitle: vim-scripts newsfeed
 
 ## News
 
-<div id="news">
-  <ul class="posts big-list hfeed">
+<div id="newslist">
+  <table>
   {% for post in site.categories.news %}
-    <li>
-      <article class="post hentry">
-        <header><h1 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h1></header>
-        <footer><time datetime="{{ post.date | date_to_string }}" class="updated" pubdate>{{ post.date | date_to_string }}</time></footer>
+    <tr class="post">
+      <td><h1 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h1></td>
+      <td><time datetime="{{ post.date | date_to_string }}" class="updated" pubdate>{{ post.date | date_to_string }}</time></td>
+      <td>{% if post.author %}<span class="author">{{ post.author }}</span>{% endif %}</td>
+    </tr><tr>
+      <td colspan="3">
         <p class="entry-content">{{ post.content | strip_html | truncatewords: 25 }} <a href="{{ post.url }}" class="bookmark" rel="bookmark">more &raquo;</a></p>
-      </article>
-    </li>
+      </td>
+    </tr>
   {% endfor %}
+  </table>
 </div>
 
 <script type="text/javascript">

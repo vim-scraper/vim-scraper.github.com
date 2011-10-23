@@ -2,6 +2,7 @@
 layout: news
 title: Fixed Compiler Plugins
 category: news
+author: bronson
 ---
 
 39 repositories have been fixed and regenerated.  The scraper

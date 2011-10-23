@@ -2,6 +2,7 @@
 layout: news
 title: Autoload and After directories
 category: news
+author: bronson
 ---
 
 A lot of plugins put files in autoload or after directories, which

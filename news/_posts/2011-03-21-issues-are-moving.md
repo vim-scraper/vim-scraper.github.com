@@ -2,6 +2,7 @@
 layout: news
 title: Combining Issue Trackers
 category: news
+author: bronson
 ---
 
 vim-scripts.org used to have one issue tracker for the website and another

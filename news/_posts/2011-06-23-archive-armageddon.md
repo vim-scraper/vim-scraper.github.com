@@ -2,6 +2,7 @@
 layout: news
 title: Archive Armageddon
 category: news
+author: bronson
 ---
 
 This is a quick description of two scraper stalls that happened in May.
