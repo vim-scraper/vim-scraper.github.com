@@ -7,7 +7,6 @@ rsstitle: vim-scripts newsfeed
 
 ## News
 
-{% for post in site.categories.news %}
 <div id="news">
   <ul class="posts big-list hfeed">
   {% for post in site.categories.news %}
@@ -20,8 +19,6 @@ rsstitle: vim-scripts newsfeed
     </li>
   {% endfor %}
 </div>
-
-{% endfor %}
 
 <script type="text/javascript">
   var disqus_shortname = 'vimscripts';
