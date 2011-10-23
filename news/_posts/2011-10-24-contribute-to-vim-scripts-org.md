@@ -5,10 +5,6 @@ category: news
 author: gmarik
 ---
 
----
-title: vim-scripts.org is looking for contributors
----
-
 Hello Vimmers!
 
 All of you probably know the great [vim-scripts.org] project that mirrors [all vim.org scripts on Github](http://vim-scripts.org/vim/scripts.html) making them [available as git repos](https://github.com/vim-scripts).
