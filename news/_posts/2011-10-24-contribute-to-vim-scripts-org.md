@@ -7,7 +7,7 @@ author: gmarik
 
 Hello Vimmers!
 
-All of you probably know the great [vim-scripts.org] project that mirrors [all vim.org scripts on Github](http://vim-scripts.org/vim/scripts.html) making them [available as git repos](https://github.com/vim-scripts).
+All of you probably know that [vim-scripts.org] mirrors [all vim.org scripts on Github](http://vim-scripts.org/vim/scripts.html) making them [available as git repos](https://github.com/vim-scripts).
 
 [Scott](https://github.com/bronson), the author of [vim-scripts.org](http://vim-scripts.org) did a great job with implementing and running it (at his own expense btw).  Still it can be even better!
 
