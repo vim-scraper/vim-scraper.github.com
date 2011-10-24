@@ -17,10 +17,10 @@ Therefore in order to improve [vim-scripts.org] we're looking for those of you i
 Here's general outline on what needs to be done:
 
 1. new website [theme](https://github.com/vim-scraper/vim-scraper.github.com/issues/9), logo, [favicon](https://github.com/vim-scraper/vim-scraper.github.com/issues/10)
-2. Jekyll fixes: [pagination](https://github.com/vim-scraper/vim-scraper.github.com/issues/6), [news dupes](https://github.com/vim-scraper/vim-scraper.github.com/issues/7)
-3. Language improvements all over the site: [edit down](https://github.com/vim-scraper/vim-scraper.github.com/issues/2)
-4. List of all [web-site UX/UI improvements](https://github.com/vim-scraper/vim-scraper.github.com/issues)
-5. [scraper bugfixes](https://github.com/vim-scraper/vim-scraper/issues), lots of them
+2. [Jekyll](http://github.com/mojobmo/jekyll) based template fixes: [pagination](https://github.com/vim-scraper/vim-scraper.github.com/issues/6), [news dupes](https://github.com/vim-scraper/vim-scraper.github.com/issues/7)
+3. language improvements all over the site: [edit down](https://github.com/vim-scraper/vim-scraper.github.com/issues/2)
+4. all [web-site UX/UI issues](https://github.com/vim-scraper/vim-scraper.github.com/issues)
+5. many [scraper issues](https://github.com/vim-scraper/vim-scraper/issues)
 
 Yeah, lots to be done!
 
