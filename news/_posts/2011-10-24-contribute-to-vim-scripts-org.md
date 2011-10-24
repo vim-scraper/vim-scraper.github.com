@@ -24,9 +24,9 @@ Here's general outline on what needs to be done:
 
 Yeah, lots to be done!
 
-In case you cannot contribute with your skills you can always donate to support the project.
+In case you cannot contribute with your skills you can always [ donate ](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TPRYUWB49GUAU) to support the project.
 
-Discussion is welcomed so make sure to leave your [comment].
+Discussion is welcomed so make sure to leave your [comment](#comments).
 
 Thanks all, let's make Vim ecosystem better!
 
@@ -38,3 +38,4 @@ References:
 
 
 [vim-scripts.org]:http://vim-scripts.org
+
