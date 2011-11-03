@@ -20,8 +20,9 @@ These projects work closely with the vim-scripts.org mirror:
 
 and these help manage the plugins once they're downloaded.
 
- * [Pathogen](http://github.com/tpope/vim-pathogen) allows you to store your scripts
-   individually in ~/.vim/bundles instead of one gigantic communal directory tree.
+ * [Pathogen](http://github.com/tpope/vim-pathogen) and its lightweight alternative
+   [Unbundle](http://github.com/sunaku/vim-unbundle) allow you to store your scripts
+   individually in `~/.vim/bundle/` instead of one gigantic communal directory tree.
  * [tplugin](http://github.com/tomtom/tplugin_vim)
    can be thought of as a mix of Pathogen and
    [AsNeeded](http://github.com/vim-scripts/AsNeeded).
