@@ -18,7 +18,7 @@ These projects work closely with the vim-scripts.org mirror:
  * Also see the alternatives below.  They don't use the mirror but
    some of them make downloading scripts much easier.
 
-and these help manage the plugins once they're downloaded.
+These projects help manage the plugins once they're downloaded:
 
  * [Pathogen](http://github.com/tpope/vim-pathogen) and its lightweight alternative
    [Unbundle](http://github.com/sunaku/vim-unbundle) allow you to store your scripts
