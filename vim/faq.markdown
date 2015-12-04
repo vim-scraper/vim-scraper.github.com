@@ -31,15 +31,15 @@ and we'll fix the scraper and regenerate the script.
 there's little chance the original authors would ever see them.
 Still, it might make sense to be able to file issues anyway.
 This is easy enough to change, we just haven't made a final decision yet.
-Discuss it [here](http://github.com/vim-scripts/vim-scraper/issues/issue/2).
+Discuss it [here]({{ site.vim-scraper.issues_url }}/issue/2).
 
 
 **Q:** I sent you a GitHub messsage.  Why don't you respond?
 
 vim-scripts is just a robot.  The best way to discuss things
 is by filing an issue on either the
-<a href="http://github.com/vim-scripts/vim-scraper/issues">scraper</a> or
-<a href="http://github.com/vim-scripts/vim-scripts.github.com/issues">documentation</a>.
+<a href="{{ site.vim-scraper.issues_url }}">scraper</a> or
+<a href="{{ site.github.issues_url }}">documentation</a>.
 
 **Q:** I sent you a messsage or pull request.  Why don't you respond?
 
@@ -50,7 +50,7 @@ is by filing an issue on either the
 
 **A:** The scripts are updated multiple times per day from the
 RSS feed.  The most recent changes can be seen on the
-<a href="http://github.com/vim-scripts">GitHub page</a>.
+<a href="{{ site.vim-scripts.organization_url }}">GitHub page</a>.
 
 
 ### For Script Developers

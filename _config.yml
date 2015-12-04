@@ -1,4 +1,11 @@
 markdown: rdiscount
 safe: true
 lsi: false
-pygments: true
+highlighter: pygments
+vim-scripts:
+  organization_url: "https://github.com/vim-scripts/"
+  feed_url: "https://github.com/vim-scripts.atom"
+vim-scraper:
+  repository_url: "https://github.com/vim-scraper/vim-scraper/"
+  issues_url: "https://github.com/vim-scraper/vim-scraper/issues"
+  feed_url: "https://github.com/vim-scraper/vim-scraper/commits/master.atom"

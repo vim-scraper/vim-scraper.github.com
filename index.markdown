@@ -11,7 +11,7 @@ This mirror provides access to any of the scripts
 [on vim.org](http://www.vim.org/scripts/) using
 [Git](http://git-scm.com/).
 It was inspired by
-[Pathogen's](http://github.com/tpope/vim-pathogen)
+[Pathogen's](https://github.com/tpope/vim-pathogen)
 simple approach to
 [Vim](http://vim.org/) plugins.
 
@@ -19,7 +19,7 @@ simple approach to
 **NOTE: we are in a beta period.**
 We expect that things will be stable from here on out but these repos
 are still too new to be sure.  Enjoy using them and report
-any problems you see on the [issue tracker](http://github.com/vim-scripts/vim-scraper/issues)!
+any problems you see on the [issue tracker]({{ site.vim-scraper.issues_url }})!
 
 
 ### Usage
@@ -34,10 +34,13 @@ Still, it can be even easier.  See [Vim Plugin Managers](/vim/tools.html).
 
 ### Subscribe
 
-* site [news](/vim/news.html) [feed](/feeds/news.xml)![feed](http://github.com/images/icons/feed.png)
-* [scripts feed](http://github.com/vim-scripts.atom)![feed](http://github.com/images/icons/feed.png) or follow the [vim-scripts user](http://github.com/vim-scripts/)
-* [scraper feed](http://github.com/vim-scripts/vim-scraper/commits/master.atom)![feed](http://github.com/images/icons/feed.png) or watch the [vim-scraper](http://github.com/vim-scripts/vim-scraper) project
-* or subscribe to your favorite [scripts](http://github.com/vim-scripts/) feeds 
+* site [news](/vim/news.html)
+  ([feed ![feed](/images/feed.svg =12x)](/feeds/news.xml)),
+* [scripts ![feed](/images/feed.svg =12x)]({{ site.vim-scripts.feed_url }})
+  or follow the [vim-scripts user]({{ site.vim-scripts.organization_url }})
+* [scraper ![feed](/images/feed.svg =12x)]({{ site.vim-scraper.feed_url }})
+  or watch the [vim-scraper]({{ site.vim-scraper.repository_url }}) project
+* or subscribe to your favorite [scripts]({{ site.vim-scripts.organization_url }}) feeds
 
 
 <div id="recent-news">

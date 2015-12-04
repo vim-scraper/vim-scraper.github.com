@@ -7,11 +7,11 @@ title: Support
 
 Scraper or script issues?  File an issue on the scraper:
 
-* <https://github.com/vim-scraper/vim-scraper/issues>
+* <{{ site.vim-scraper.issues_url }}>
 
 Site issues?  File an issue on the static website:
 
-* <https://github.com/vim-scraper/vim-scraper.github.com/issues>
+* <{{ site.github.issues_url }}>
 
 If you find a security issue or have something that shouldn't appear
 in public, email
